@@ -5,156 +5,61 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-              title: Text(
-                "testing di coba",
-                style: TextStyle(fontSize: 30),
-              ),
-              backgroundColor: Colors.amber),
-          body: Row(
-            children: [
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 30, left: 30),
-                  child: SingleChildScrollView(
-                    child: Column(children: [
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.blue,
-                              height: 50,
-                              width: 50,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        color: Colors.amber,
-                        height: 200,
-                        width: 200,
-                        child: Text(
-                          "test",
-                          style: TextStyle(
-                            fontSize: 30,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        color: Colors.red,
-                        height: 200,
-                        width: 200,
-                      ),
-                      Container(
-                        color: Colors.blue,
-                        height: 200,
-                        width: 200,
-                      ),
-                      Container(
-                        color: Colors.pink,
-                        height: 200,
-                        width: 200,
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.green,
-                              height: 100,
-                              width: 100,
-                            ),
-                            Container(
-                              color: Colors.purple,
-                              height: 100,
-                              width: 100,
-                            ),
-                          ],
-                        ),
-                      )
-                    ]),
+        backgroundColor: Colors.red,
+        body: Center(
+          child: Container(
+            width: 593,
+            height: 558,
+            color: Colors.white,
+            child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center, // letakkan kolom di tengah
+              children: [
+                Container(
+                  color: Colors.blueGrey,
+                  height: 72,
+                  width: 434,
+                  child: Center(
+                    child: Text(
+                      "username",
+                      style: TextStyle(fontSize: 25),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 30, left: 30),
-                  child: SingleChildScrollView(
-                    child: Column(children: [
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.blue,
-                              height: 50,
-                              width: 50,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        color: Colors.amber,
-                        height: 200,
-                        width: 200,
-                      ),
-                      Container(
-                        color: Colors.red,
-                        height: 200,
-                        width: 200,
-                      ),
-                      Container(
-                        color: Colors.blue,
-                        height: 200,
-                        width: 200,
-                      ),
-                      Container(
-                        color: Colors.pink,
-                        height: 200,
-                        width: 200,
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.green,
-                              height: 100,
-                              width: 100,
-                            ),
-                            Container(
-                              color: Colors.purple,
-                              height: 100,
-                              width: 100,
-                            ),
-                          ],
-                        ),
-                      )
-                    ]),
+                SizedBox(height: 28),
+                Container(
+                  color: Colors.blueGrey,
+                  height: 72,
+                  width: 434,
+                  child: Center(
+                    child: Text(
+                      "password",
+                      style: TextStyle(fontSize: 25),
+                    ),
                   ),
                 ),
-              ),
-            ],
-          )),
+                SizedBox(height: 28),
+                Container(
+                  color: Colors.blue,
+                  height: 46,
+                  width: 177,
+                  child: Center(
+                    child: Text(
+                      "login",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
-  }
-}
-
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
-
-  @override
-  State<MyWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<MyWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
