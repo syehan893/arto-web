@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'utils/warna.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,53 +11,77 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: primaryColor,
         body: Center(
           child: Container(
             width: 593,
             height: 558,
-            color: Colors.white,
-            decoration: BoxDecoration(),
-            child: Column(
-              mainAxisAlignment:
-                  MainAxisAlignment.center, // letakkan kolom di tengah
-              children: [
-                Container(
-                  color: Colors.blueGrey,
-                  height: 72,
-                  width: 434,
-                  child: Center(
-                    child: Text(
-                      "user",
-                      style: TextStyle(fontSize: 25),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(13),
+              color: secunderColor,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Column(
+                  children: [
+                    Container(
+                      width: 300,
+                      height: 100,
+                      color: Colors.white,
+                      child: Image(
+                          image: NetworkImage(
+                              "https://i.ibb.co/7p7pJjk/logo.png")),
                     ),
-                  ),
-                ),
-                SizedBox(height: 28),
-                Container(
-                  color: Colors.blueGrey,
-                  height: 72,
-                  width: 434,
-                  child: Center(
-                    child: Text(
-                      "password",
-                      style: TextStyle(fontSize: 25),
+                    Padding(
+                      padding: const EdgeInsets.only(),
+                      child: Container(
+                        width: 434,
+                        height: 72,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(23),
+                          color: loginButtonColor,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                SizedBox(height: 28),
-                Container(
-                  color: Colors.blue,
-                  height: 46,
-                  width: 177,
-                  child: Center(
-                    child: Text(
-                      "login",
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    SizedBox(
+                      height: 28,
                     ),
-                  ),
+                    Container(
+                      width: 434,
+                      height: 72,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(23),
+                        color: loginButtonColor,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: TextField(
+                          decoration: InputDecoration(border: InputBorder.none),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 28,
+                    ),
+                    Container(
+                      width: 177,
+                      height: 46,
+                      child: ElevatedButton(
+                          onPressed: () {}, child: Text("LOGIN")),
+                    )
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         ),
