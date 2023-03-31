@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'utils/warna.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,14 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: primaryColor,
         body: Center(
           child: Container(
             width: 593,
             height: 558,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(13),
-              color: Colors.white,
+              color: secunderColor,
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -40,13 +41,14 @@ class MyApp extends StatelessWidget {
                         height: 72,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(23),
-                          color: Colors.blueGrey,
+                          color: loginButtonColor,
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: TextField(
-                            decoration:
-                                InputDecoration(border: InputBorder.none),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),
@@ -59,7 +61,7 @@ class MyApp extends StatelessWidget {
                       height: 72,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(23),
-                        color: Colors.blueGrey,
+                        color: loginButtonColor,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
