@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
             width: 593,
             height: 558,
             color: Colors.white,
-            decoration: BoxDecoration(),
             child: Column(
               mainAxisAlignment:
                   MainAxisAlignment.center, // letakkan kolom di tengah
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
                   width: 434,
                   child: Center(
                     child: Text(
-                      "user",
+                      "username",
                       style: TextStyle(fontSize: 25),
                     ),
                   ),
