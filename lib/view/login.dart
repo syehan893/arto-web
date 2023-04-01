@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ta_smt4/fitur/dasbord.dart';
-import 'package:ta_smt4/fitur/menu.dart';
+import 'package:ta_smt4/view/dasbord.dart';
+import 'package:ta_smt4/view/menu.dart';
 import '../utils/warna.dart';
 
 void main() {
@@ -55,7 +55,7 @@ class LoginPage extends StatelessWidget {
                         color: columnLoginColor,
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16),
+                        padding: const EdgeInsets.all(10.0),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -84,7 +84,9 @@ class LoginPage extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: TextField(
-                        decoration: InputDecoration(border: InputBorder.none),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
                       ),
                     ),
                   ),
@@ -99,7 +101,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Menu(),
+                            builder: (context) => Dasbord(),
                           ),
                         );
                       },
