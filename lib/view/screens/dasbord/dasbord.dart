@@ -140,7 +140,7 @@ class Dasbord extends StatelessWidget {
                           MaterialStateProperty.all<Color>(loginButtonColor),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(secunderColor)),
-                  child: Text("HELP"),
+                  child: Text("HELP help"),
                 ),
               )
             ],
