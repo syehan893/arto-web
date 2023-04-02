@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ta_smt4/view/screens/dasbord/dasbord.dart';
-import '../../../utils/warna.dart';
 import '../../utils/warna.dart';
+
+
 
 void main() {
   runApp(LoginPage());
 }
 
 class LoginPage extends StatelessWidget {
+  get columnLoginColor => null;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,7 +59,7 @@ class LoginPage extends StatelessWidget {
                             height: 72,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: columnLoginColor,
+                              color: secunderColor
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
@@ -87,7 +90,7 @@ class LoginPage extends StatelessWidget {
                           height: 72,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(23),
-                            color: columnLoginColor,
+                            color: columnLoginColor
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10),

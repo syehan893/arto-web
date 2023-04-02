@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ta_smt4/view/screens/login/login.dart';
-import 'utils/warna.dart';
+import 'view/utils/warna.dart';
 
 void main() {
   runApp(MyApp());
