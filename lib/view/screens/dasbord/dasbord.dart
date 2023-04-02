@@ -2,6 +2,7 @@ import 'package:easy_sidemenu/easy_sidemenu.dart' as menu;
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:ta_smt4/view/screens/help/help.dart';
 
 import '../../utils/warna.dart';
 
@@ -125,7 +126,7 @@ class Dasbord extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Dasbord(),
+                        builder: (context) => Help(),
                       ),
                     );
                   },
