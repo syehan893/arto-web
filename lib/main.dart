@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ta_smt4/view/login.dart';
+import 'package:ta_smt4/view/screens/login/login.dart';
 import 'utils/warna.dart';
 
 void main() {
