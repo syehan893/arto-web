@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ta_smt4/view/screens/help/help.dart';
+import 'package:ta_smt4/view/screens/transfer/transfer.dart';
 
 import '../../utils/warna.dart';
 
@@ -17,6 +18,7 @@ class Dasbord extends StatelessWidget {
           color: Colors.white60,
           width: 200,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                 width: 177,
@@ -26,7 +28,7 @@ class Dasbord extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Dasbord(),
+                        builder: (context) => Transfer(),
                       ),
                     );
                   },

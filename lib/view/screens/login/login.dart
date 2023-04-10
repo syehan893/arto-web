@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
                             height: 72,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: secunderColor
+                              color: Colors.grey
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
@@ -91,7 +91,7 @@ class LoginPage extends StatelessWidget {
                           height: 72,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(23),
-                            color: columnLoginColor
+                            color: Colors.grey
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10),
