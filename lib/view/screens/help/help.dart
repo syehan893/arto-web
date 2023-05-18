@@ -113,102 +113,57 @@ class Help extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        height: 47,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.horizontal(
-                            right: Radius.circular(10),
-                            left: Radius.circular(10),
-                          ),
-                          border: Border.all(
-                            color: Colors.black,
-                            width: 2.0,
-                          ),
-                          color: Colors.grey[300],
-                        ),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'web/assets/online_support.png',
-                                width: 24,
-                                height: 24,
-                              ),
-                              SizedBox(
-                                width: 23,
-                              ),
-                              Text(
-                                'Call Center',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 23,
-                              ),
-                              Text(
-                                '0251 1234 5670',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      SizedBox(
+                        width: 52,
                       ),
-                      Container(
-                        margin: const EdgeInsets.only(right: 19),
-                        height: 47,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.horizontal(
-                            left: Radius.circular(10),
-                            right: Radius.circular(10),
-                          ),
-                          border: Border.all(
-                            color: Colors.black,
-                            width: 2.0,
-                          ),
-                          color: Colors.grey[300],
-                        ),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'web/assets/logo_wa.png',
-                                height: 24,
-                                width: 24,
-                              ),
-                              SizedBox(
-                                width: 23,
-                              ),
-                              Text(
-                                'Official Whatsapp',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 23,
-                              ),
-                              Text(
-                                '0251 1234 5670',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      helpInfoCard(
+                          image: 'web/assets/online_support.png',
+                          name: 'Call Center 1',
+                          telp: '0251 1234 5670'),
+                      SizedBox(
+                        width: 22,
+                      ),
+                      helpInfoCard(
+                          image: 'web/assets/logo_wa.png',
+                          name: 'Official Whatsapp',
+                          telp: '0251 1234 5670'),
+                      SizedBox(
+                        width: 19,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: 52,
+                      ),
+                      helpInfoCard(
+                          image: 'web/assets/online_support.png',
+                          name: 'Call Center 2',
+                          telp: '0251 1234 5670'),
+                      SizedBox(
+                        width: 22,
+                      ),
+                      helpInfoCard(
+                          image: 'web/assets/logo_wa.png',
+                          name: 'Official Whatsapp',
+                          telp: '0251 1234 5670'),
+                      SizedBox(
+                        width: 19,
                       ),
                     ],
                   ),
                 ),
               ])),
+          SizedBox(
+            height: 8,
+          ),
           Expanded(
               child: Container(
             width: lebarBody * 0.20,
@@ -216,6 +171,58 @@ class Help extends StatelessWidget {
             color: sideRightColor,
           ))
         ],
+      ),
+    );
+  }
+
+  Expanded helpInfoCard({String? image, String? name, String? telp}) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        height: 47,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.horizontal(
+            right: Radius.circular(10),
+            left: Radius.circular(10),
+          ),
+          border: Border.all(
+            color: Colors.black,
+            width: 2.0,
+          ),
+          color: Colors.grey[300],
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                image ?? '',
+                width: 24,
+                height: 24,
+              ),
+              SizedBox(
+                width: 23,
+              ),
+              Text(
+                name ?? '',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                width: 23,
+              ),
+              Text(
+                telp ?? '',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
