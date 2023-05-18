@@ -91,7 +91,7 @@ class _TransferState extends State<Transfer> {
                     width: lebarBody,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(255, 194, 118, 118),
+                      color: Color.fromARGB(255, 101, 209, 80),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
