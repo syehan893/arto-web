@@ -111,13 +111,13 @@ class Help extends StatelessWidget {
                 ),
                 Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(left: 52, right: 22),
+                        padding: const EdgeInsets.all(10),
                         height: 47,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.horizontal(
+                          borderRadius: const BorderRadius.horizontal(
                             right: Radius.circular(10),
                             left: Radius.circular(10),
                           ),
@@ -128,12 +128,30 @@ class Help extends StatelessWidget {
                           color: Colors.grey[300],
                         ),
                         child: Center(
-                          child: Text(
-                            'Kontainer Kiri',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          child: Row(
+                            children: [
+                              Image.asset('web/assets/online_support.png'),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                'Call Center',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                '2222 2222 2222',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -153,7 +171,7 @@ class Help extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            'Kontainer Kanan',
+                            'LOGO Call Center 2222 2222 2222',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
