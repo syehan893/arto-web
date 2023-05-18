@@ -130,14 +130,18 @@ class Help extends StatelessWidget {
                         child: Center(
                           child: Row(
                             children: [
-                              Image.asset('web/assets/online_support.png'),
+                              Image.asset(
+                                'web/assets/online_support.png',
+                                width: 24,
+                                height: 24,
+                              ),
                               SizedBox(
                                 width: 23,
                               ),
                               Text(
                                 'Call Center',
                                 style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -145,7 +149,7 @@ class Help extends StatelessWidget {
                                 width: 23,
                               ),
                               Text(
-                                '2222 2222 2222',
+                                '0251 1234 5670',
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -170,12 +174,34 @@ class Help extends StatelessWidget {
                           color: Colors.grey[300],
                         ),
                         child: Center(
-                          child: Text(
-                            'LOGO Call Center 2222 2222 2222',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'web/assets/logo_wa.png',
+                                height: 24,
+                                width: 24,
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                'Official Whatsapp',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                '0251 1234 5670',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
