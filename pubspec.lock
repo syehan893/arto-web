@@ -64,7 +64,12 @@ packages:
       sha256: "6cfb5af12253eaf2b368f07bacc5a80d1301a071c73360d746b7f2e32d762c66"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.1"
+=======
+<<<<<<< HEAD
+    version: "2.1.0"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   build:
     dependency: transitive
     description:
@@ -137,6 +142,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+=======
+    version: "2.1.1"
+>>>>>>> 791e956 (adi)
   characters:
     dependency: transitive
     description:
@@ -144,7 +152,12 @@ packages:
       sha256: "04a925763edad70e8443c99234dc3328f442e811f1d8fd1a72f1c8ad0f69a605"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "1.3.0"
+=======
+<<<<<<< HEAD
+    version: "1.2.1"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   checked_yaml:
     dependency: transitive
     description:
@@ -161,6 +174,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.5"
+=======
+    version: "1.3.0"
+>>>>>>> 791e956 (adi)
   clock:
     dependency: transitive
     description:
@@ -181,10 +197,18 @@ packages:
     dependency: transitive
     description:
       name: collection
+<<<<<<< HEAD
       sha256: f092b211a4319e98e5ff58223576de6c2803db36221657b46c82574721240687
       url: "https://pub.dev"
     source: hosted
     version: "1.17.2"
+=======
+      sha256: "4a07be6cb69c84d677a6c3096fcf960cc3285a8330b4603e0d463d15d9bd934c"
+      url: "https://pub.dev"
+    source: hosted
+<<<<<<< HEAD
+    version: "1.16.0"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   convert:
     dependency: transitive
     description:
@@ -217,6 +241,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.17.2"
+=======
+    version: "1.17.1"
+>>>>>>> 791e956 (adi)
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -448,6 +475,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -613,12 +641,19 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+=======
+>>>>>>> 791e956 (adi)
   js:
     dependency: transitive
     description:
       name: js
+<<<<<<< HEAD
       sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
       url: "https://pub.dev"
+=======
+<<<<<<< HEAD
+      url: "https://pub.dartlang.org"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
     source: hosted
     version: "0.6.7"
   json_annotation:
@@ -637,6 +672,12 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+=======
+      sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.7"
+>>>>>>> 791e956 (adi)
   lints:
     dependency: transitive
     description:
@@ -665,10 +706,17 @@ packages:
     dependency: transitive
     description:
       name: matcher
+<<<<<<< HEAD
       sha256: "16db949ceee371e9b99d22f88fa3a73c4e59fd0afed0bd25fc336eb76c198b72"
       url: "https://pub.dev"
     source: hosted
     version: "0.12.13"
+=======
+      sha256: "6501fbd55da300384b768785b83e5ce66991266cec21af89ab9ae7f5ce1c4cbb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.12.15"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   material_color_utilities:
     dependency: transitive
     description:
@@ -684,8 +732,17 @@ packages:
       sha256: "3c74dbf8763d36539f114c799d8a2d87343b5067e9d796ca22b5eb8437090ee3"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "1.9.1"
+=======
+<<<<<<< HEAD
+    version: "1.8.0"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   mime:
+=======
+    version: "1.9.1"
+  path:
+>>>>>>> 791e956 (adi)
     dependency: transitive
     description:
       name: mime
@@ -716,7 +773,12 @@ packages:
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "1.8.3"
+=======
+<<<<<<< HEAD
+    version: "1.8.2"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   path_provider_linux:
     dependency: transitive
     description:
@@ -941,6 +1003,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+=======
+    version: "1.8.3"
+>>>>>>> 791e956 (adi)
   sky_engine:
     dependency: transitive
     description: flutter
@@ -958,10 +1023,18 @@ packages:
     dependency: transitive
     description:
       name: source_span
+<<<<<<< HEAD
       sha256: "53e943d4206a5e30df338fd4c6e7a077e02254531b138a15aec3bd143c1a8b3c"
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+=======
+      sha256: dd904f795d4b4f3b870833847c461801f6750a9fa8e61ea5ac53f9422b31f250
+      url: "https://pub.dev"
+    source: hosted
+<<<<<<< HEAD
+    version: "1.9.0"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   sprintf:
     dependency: "direct main"
     description:
@@ -970,6 +1043,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
+=======
+    version: "1.9.1"
+>>>>>>> 791e956 (adi)
   stack_trace:
     dependency: transitive
     description:
@@ -985,7 +1061,12 @@ packages:
       sha256: "83615bee9045c1d322bbbd1ba209b7a749c2cbcdcb3fdd1df8eb488b3279c1c8"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.1"
+=======
+<<<<<<< HEAD
+    version: "2.1.0"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   stream_transform:
     dependency: transitive
     description:
@@ -994,6 +1075,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+=======
+    version: "2.1.1"
+>>>>>>> 791e956 (adi)
   string_scanner:
     dependency: transitive
     description:
@@ -1014,10 +1098,18 @@ packages:
     dependency: transitive
     description:
       name: test_api
+<<<<<<< HEAD
       sha256: "75760ffd7786fffdfb9597c35c5b27eaeec82be8edfb6d71d32651128ed7aab8"
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+=======
+      sha256: eb6ac1540b26de412b3403a163d919ba86f6a973fe6cc50ae3541b80092fdcfb
+      url: "https://pub.dev"
+    source: hosted
+<<<<<<< HEAD
+    version: "0.4.12"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   time_machine:
     dependency: "direct main"
     description:
@@ -1122,6 +1214,9 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.6"
+=======
+    version: "0.5.1"
+>>>>>>> 791e956 (adi)
   vector_math:
     dependency: transitive
     description:
@@ -1129,7 +1224,12 @@ packages:
       sha256: "80b3257d1492ce4d091729e3a67a60407d227c27241d6927be0130c98e741803"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.4"
+=======
+<<<<<<< HEAD
+    version: "2.1.2"
+>>>>>>> 8b64a26da18d09cb182df7ead8200d13e5daa10d
   watcher:
     dependency: transitive
     description:
@@ -1181,3 +1281,9 @@ packages:
 sdks:
   dart: ">=3.0.0-0 <4.0.0"
   flutter: ">=3.3.0"
+=======
+    version: "2.1.4"
+sdks:
+  dart: ">=3.0.0-0 <4.0.0"
+  flutter: ">=1.17.0"
+>>>>>>> 791e956 (adi)
