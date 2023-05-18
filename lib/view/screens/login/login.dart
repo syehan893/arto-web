@@ -3,8 +3,6 @@ import 'package:ta_smt4/view/screens/dasbord/dasbord.dart';
 import '../../utils/warna.dart';
 import '../../utils/warna.dart';
 
-
-
 void main() {
   runApp(LoginPage());
 }
@@ -37,7 +35,7 @@ class LoginPage extends StatelessWidget {
                       color: secunderColor,
                       child: Image(
                           image: NetworkImage(
-                              "https://i.ibb.co/7p7pJjk/logo.png")),
+                              "https://imgtr.ee/images/2023/05/17/vIQJI.png")),
                     ),
                     Column(
                       children: [
@@ -59,9 +57,8 @@ class LoginPage extends StatelessWidget {
                             width: 434,
                             height: 72,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey
-                            ),
+                                borderRadius: BorderRadius.circular(23),
+                                color: Colors.grey),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
                               child: TextField(
@@ -90,9 +87,8 @@ class LoginPage extends StatelessWidget {
                           width: 434,
                           height: 72,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(23),
-                            color: Colors.grey
-                          ),
+                              borderRadius: BorderRadius.circular(23),
+                              color: Colors.grey),
                           child: Padding(
                             padding: const EdgeInsets.all(10),
                             child: TextField(

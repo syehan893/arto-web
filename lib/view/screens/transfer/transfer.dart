@@ -27,7 +27,7 @@ class _TransferState extends State<Transfer> {
             child: Container(
               width: lebarBody * 0.20,
               height: tinggiBody,
-              color: Colors.grey,
+              color: sideLeftColor,
             ),
           ), //kiri
           Container(
@@ -112,7 +112,12 @@ class _TransferState extends State<Transfer> {
                               hint: Text("nominal transfer"),
                               underline: SizedBox(),
                               isExpanded: true,
-                              items: ["500.000", "1.000.000", "3.000.000", "5.000.000"]
+                              items: [
+                                "500.000",
+                                "1.000.000",
+                                "3.000.000",
+                                "5.000.000"
+                              ]
                                   .map<DropdownMenuItem<String>>(
                                       (e) => DropdownMenuItem(
                                             child: Text(e.toString()),
@@ -232,7 +237,7 @@ class _TransferState extends State<Transfer> {
             child: Container(
               width: lebarBody * 0.20,
               height: tinggiBody,
-              color: Colors.redAccent,
+              color: sideRightColor,
             ),
           ), //kanan
         ],
