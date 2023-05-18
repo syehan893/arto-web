@@ -151,8 +151,8 @@ class Help extends StatelessWidget {
                         width: 22,
                       ),
                       helpInfoCard(
-                          image: 'web/assets/logo_wa.png',
-                          name: 'Official Whatsapp',
+                          image: 'web/assets/logo_telegram.png',
+                          name: 'Official Telegram',
                           telp: '0251 1234 5670'),
                       SizedBox(
                         width: 19,
