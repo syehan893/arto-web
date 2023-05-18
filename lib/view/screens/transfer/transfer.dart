@@ -59,6 +59,7 @@ class _TransferState extends State<Transfer> {
                     color: Colors.black,
                   ), //garis
                 ),
+
                 Container(
                   child: Column(
                     children: [
@@ -82,6 +83,7 @@ class _TransferState extends State<Transfer> {
                     ],
                   ),
                 ),
+                // kotak input
                 Padding(
                   padding: const EdgeInsets.fromLTRB(100, 20, 100, 20),
                   child: Container(
