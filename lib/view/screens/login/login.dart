@@ -33,9 +33,7 @@ class LoginPage extends StatelessWidget {
                       width: 321,
                       height: 93,
                       color: secunderColor,
-                      child: Image(
-                          image: NetworkImage(
-                              "https://imgtr.ee/images/2023/05/17/vIQJI.png")),
+                      child: Image.asset('web/assets/logo-arto.png'),
                     ),
                     Column(
                       children: [
