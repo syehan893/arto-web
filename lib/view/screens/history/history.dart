@@ -24,10 +24,9 @@ class _HistoryState extends State<History> {
       children: [
         Expanded(
           child: Container(
-            width: lebarBody * 0.20,
-            height: tinggiBody,
-            color: sideLeftColor
-          ),
+              width: lebarBody * 0.20,
+              height: tinggiBody,
+              color: sideLeftColor),
         ), //kiri
         Container(
           width: lebarBody * 0.60,
