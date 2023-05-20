@@ -6,3 +6,4 @@ const loginButtonColor = Color(0xFF002B5B);
 const columnLoginColor = Color(0xffD9D9D9);
 const sideRightColor = Color(0xffEA5455);
 const sideLeftColor = Color(0xffE4DCCF);
+const centerPageColor = Color(0xffF9F5EB);

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ta_smt4/view/screens/help/help.dart';
+import 'package:ta_smt4/view/screens/request/request.dart';
 import 'package:ta_smt4/view/screens/history/history.dart';
 import 'package:ta_smt4/view/screens/topUp/topUp.dart';
 import 'package:ta_smt4/view/screens/transfer/transfer.dart';
@@ -104,7 +105,7 @@ class Dasbord extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Dasbord(),
+                        builder: (context) => Request(),
                       ),
                     );
                   },

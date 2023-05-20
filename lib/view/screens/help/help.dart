@@ -24,7 +24,7 @@ class Help extends StatelessWidget {
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
-            color: Colors.white12,
+            color: centerPageColor,
             child: Column(children: [
               Align(
                 alignment: Alignment.centerLeft,
@@ -92,7 +92,7 @@ class Help extends StatelessWidget {
                 height: 29,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
-                  color: Color.fromARGB(255, 7, 9, 121),
+                  color: loginButtonColor,
                 ),
                 child: Row(
                   children: [
@@ -147,7 +147,7 @@ class Help extends StatelessWidget {
                         image: 'web/assets/online_support.png',
                         name: 'Call Center 2',
                         telp: '0251 1234 5670'),
-                    SizedBox(
+                    const SizedBox(
                       width: 22,
                     ),
                     helpInfoCard(
@@ -168,7 +168,7 @@ class Help extends StatelessWidget {
                 height: 29,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
-                  color: Color.fromARGB(255, 7, 9, 121),
+                  color: loginButtonColor,
                 ),
                 child: Row(
                   children: [
