@@ -178,7 +178,13 @@ class _HistoryState extends State<History> {
                     SizedBox(
                       height: 14,
                     ),
-                    berobat()
+                    Container(
+                      height: tinggiBody * 0.4,
+                      width: lebarBody,
+                      color: Colors.white,
+                      child: ListView(children: [transfer()],),
+                    )
+                    
                    
                   ],
                 ),
@@ -198,8 +204,8 @@ class _HistoryState extends State<History> {
   }
 }
 
-class berobat extends StatelessWidget {
-  const berobat({super.key});
+class transfer extends StatelessWidget {
+  const transfer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -215,7 +221,50 @@ class berobat extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builBerobat("TRANSFER", "transfer masuk", checkDate, 10000),
+            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 10000),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TOP UP", "transfer masuk", checkDate, 20000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TOP UP", "transfer masuk", checkDate, 9000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TOP UP", "transfer masuk", checkDate, 4000),
+          ),
+           SizedBox(
+            height: 10,
           ),
          
         ],
@@ -225,7 +274,7 @@ class berobat extends StatelessWidget {
 }
 
 // card berobat
-Card builBerobat(
+Card builTransfer(
     String title, String subTitle, DateTime checkDate, int jumlah) {
   return Card(
     color: Colors.white,
