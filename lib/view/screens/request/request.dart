@@ -176,7 +176,99 @@ class Request extends StatelessWidget {
                     ),
                     Text(
                       'nama jenis tranksaksi',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: TextStyle(fontSize: 13, color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 14,
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 48, right: 19),
+                height: 47,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    border: Border.all(
+                        color: Colors.grey.withOpacity(1), width: 1)),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 57,
+                    ),
+                    Text(
+                      'transfer rekening',
+                      style: TextStyle(fontSize: 12, color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 48, right: 19),
+                height: 47,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    border: Border.all(
+                        color: Colors.grey.withOpacity(1), width: 1)),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 57,
+                    ),
+                    Text(
+                      'transfer rekening',
+                      style: TextStyle(fontSize: 12, color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 48, right: 19),
+                height: 47,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    border: Border.all(
+                        color: Colors.grey.withOpacity(1), width: 1)),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 57,
+                    ),
+                    Text(
+                      'transfer rekening',
+                      style: TextStyle(fontSize: 12, color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 48, right: 19),
+                height: 47,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    border: Border.all(
+                        color: Colors.grey.withOpacity(1), width: 1)),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 57,
+                    ),
+                    Text(
+                      'transfer rekening',
+                      style: TextStyle(fontSize: 12, color: Colors.black),
                     ),
                   ],
                 ),
