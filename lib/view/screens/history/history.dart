@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -39,7 +37,7 @@ class _HistoryState extends State<History> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 48,top: 31),
+                  padding: const EdgeInsets.only(left: 48, top: 31),
                   child: Container(
                     child: Text(
                       "history",
@@ -52,7 +50,7 @@ class _HistoryState extends State<History> {
                 height: 52,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 48,right: 19),
+                padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
                   height: 1,
                   width: lebarBody,
@@ -69,9 +67,11 @@ class _HistoryState extends State<History> {
                       alignment: Alignment.topLeft,
                       child: Container(
                         padding: EdgeInsets.only(left: 48),
-                        child: Text("your balance",style: TextStyle(fontSize: 13),),
+                        child: Text(
+                          "your balance",
+                          style: TextStyle(fontSize: 13),
+                        ),
                       ),
-
                     ),
                     Align(
                       alignment: Alignment.topLeft,
@@ -96,20 +96,50 @@ class _HistoryState extends State<History> {
                             Container(
                               height: 30,
                               width: 100,
-                              color: Color.fromARGB(255, 233, 220, 220),
-                              child: Text("filter"),
+                              child: Center(child: Text("filter")),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(7),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
                             ),
                             Container(
                               height: 30,
                               width: 200,
-                              color: Color.fromARGB(255, 231, 221, 221),
-                              child: Text("tanggal"),
+                              child: Center(child: Text("tanggal")),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(7),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
                             ),
-                           Container(
+                            Container(
                               height: 30,
                               width: 150,
-                              color: Color.fromARGB(255, 231, 221, 221),
-                              child: Text("cari"),
+                              child: Center(child: Text("cari")),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(7),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
                             ),
                           ],
                         ),
@@ -119,13 +149,32 @@ class _HistoryState extends State<History> {
                       height: 52,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 48,right: 19),
+                      padding: const EdgeInsets.only(left: 48, right: 19),
                       child: Container(
                         width: lebarBody,
-                        height: 50,
-                        color: loginButtonColor,
+                        height: 29,
+                        decoration: BoxDecoration(
+                            color: loginButtonColor,
+                            borderRadius: BorderRadius.circular(7)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "nama/jenis transaksi",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "tanggal",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "jumlah",
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
+                        ),
                       ),
-                    )
+                    ) // kotak biru
                   ],
                 ),
               ),
