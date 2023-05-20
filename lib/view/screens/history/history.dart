@@ -174,7 +174,12 @@ class _HistoryState extends State<History> {
                           ],
                         ),
                       ),
-                    ) // kotak biru
+                    ),// kotak biru
+                    SizedBox(
+                      height: 14,
+                    ),
+                    berobat()
+                   
                   ],
                 ),
               ),
@@ -193,4 +198,66 @@ class _HistoryState extends State<History> {
   }
 }
 
-class nama {}
+class berobat extends StatelessWidget {
+  const berobat({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double tinggiBody = MediaQuery.of(context).size.height;
+    double lebarBody = MediaQuery.of(context).size.width;
+    var checkDate = new DateTime.now();
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 49,right: 19),
+      child: Column(
+        
+        children: [
+          Container(
+            height: 50,
+            width: lebarBody,
+            child: builBerobat("TRANSFER", "transfer masuk", checkDate, 10000),
+          ),
+         
+        ],
+      ),
+    );
+  }
+}
+
+// card berobat
+Card builBerobat(
+    String title, String subTitle, DateTime checkDate, int jumlah) {
+  return Card(
+    color: Colors.white,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    elevation: 5,
+    child: Padding(
+      padding: EdgeInsets.only(left:10, right: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Icon(Icons.compare_arrows_outlined),
+          Column(
+            children: [
+              Text(title,style: TextStyle(fontSize: 14),),
+              Text(subTitle,style: TextStyle(fontSize: 10), )
+            ],
+          ),
+          Column(
+            children: [
+              Text(checkDate.toString())
+            ],
+          ),
+          Column(
+            children: [
+              Text(jumlah.toString())
+            ],
+          ),
+        ],
+      )
+    ),
+  );
+}
+
+//============================================================
+
