@@ -37,7 +37,7 @@ class _HistoryState extends State<History> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.only(left: 48, top: 31),
                   child: Container(
                     child: Text(
                       "history",
@@ -47,15 +47,18 @@ class _HistoryState extends State<History> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 52,
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
-                  height: 2,
+                  height: 1,
                   width: lebarBody,
                   color: Colors.black,
                 ), //garis
+              ),
+              SizedBox(
+                height: 35,
               ),
               Container(
                 child: Column(
@@ -63,14 +66,17 @@ class _HistoryState extends State<History> {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Text("your balance"),
+                        padding: EdgeInsets.only(left: 48),
+                        child: Text(
+                          "your balance",
+                          style: TextStyle(fontSize: 13),
+                        ),
                       ),
                     ),
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 15),
+                        padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp.1.000.000,-",
                           style: TextStyle(fontSize: 32),
@@ -80,6 +86,95 @@ class _HistoryState extends State<History> {
                     SizedBox(
                       height: lebarBody * 0.01,
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 48),
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 19),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              height: 30,
+                              width: 100,
+                              child: Center(child: Text("filter")),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(7),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 200,
+                              child: Center(child: Text("tanggal")),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(7),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: Center(child: Text("cari")),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(7),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 52,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 48, right: 19),
+                      child: Container(
+                        width: lebarBody,
+                        height: 29,
+                        decoration: BoxDecoration(
+                            color: loginButtonColor,
+                            borderRadius: BorderRadius.circular(7)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "nama/jenis transaksi",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "tanggal",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "jumlah",
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
+                        ),
+                      ),
+                    ) // kotak biru
                   ],
                 ),
               ),
@@ -97,3 +192,5 @@ class _HistoryState extends State<History> {
     ));
   }
 }
+
+class nama {}
