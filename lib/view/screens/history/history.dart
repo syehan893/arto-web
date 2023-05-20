@@ -174,7 +174,18 @@ class _HistoryState extends State<History> {
                           ],
                         ),
                       ),
-                    ) // kotak biru
+                    ),// kotak biru
+                    SizedBox(
+                      height: 14,
+                    ),
+                    Container(
+                      height: tinggiBody * 0.4,
+                      width: lebarBody,
+                      color: Colors.white,
+                      child: ListView(children: [transfer()],),
+                    )
+                    
+                   
                   ],
                 ),
               ),
@@ -193,4 +204,109 @@ class _HistoryState extends State<History> {
   }
 }
 
-class nama {}
+class transfer extends StatelessWidget {
+  const transfer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double tinggiBody = MediaQuery.of(context).size.height;
+    double lebarBody = MediaQuery.of(context).size.width;
+    var checkDate = new DateTime.now();
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 49,right: 19),
+      child: Column(
+        
+        children: [
+          Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 10000),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TOP UP", "transfer masuk", checkDate, 20000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TOP UP", "transfer masuk", checkDate, 9000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+           Container(
+            height: 50,
+            width: lebarBody,
+            child: builTransfer("TOP UP", "transfer masuk", checkDate, 4000),
+          ),
+           SizedBox(
+            height: 10,
+          ),
+         
+        ],
+      ),
+    );
+  }
+}
+
+// card berobat
+Card builTransfer(
+    String title, String subTitle, DateTime checkDate, int jumlah) {
+  return Card(
+    color: Colors.white,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    elevation: 5,
+    child: Padding(
+      padding: EdgeInsets.only(left:10, right: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Icon(Icons.compare_arrows_outlined),
+          Column(
+            children: [
+              Text(title,style: TextStyle(fontSize: 14),),
+              Text(subTitle,style: TextStyle(fontSize: 10), )
+            ],
+          ),
+          Column(
+            children: [
+              Text(checkDate.toString())
+            ],
+          ),
+          Column(
+            children: [
+              Text(jumlah.toString())
+            ],
+          ),
+        ],
+      )
+    ),
+  );
+}
+
+//============================================================
+
