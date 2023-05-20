@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -37,7 +39,7 @@ class _HistoryState extends State<History> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.only(left: 48,top: 31),
                   child: Container(
                     child: Text(
                       "history",
@@ -47,15 +49,18 @@ class _HistoryState extends State<History> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 52,
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.only(left: 48,right: 19),
                 child: Container(
-                  height: 2,
+                  height: 1,
                   width: lebarBody,
                   color: Colors.black,
                 ), //garis
+              ),
+              SizedBox(
+                height: 35,
               ),
               Container(
                 child: Column(
@@ -63,14 +68,15 @@ class _HistoryState extends State<History> {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Text("your balance"),
+                        padding: EdgeInsets.only(left: 48),
+                        child: Text("your balance",style: TextStyle(fontSize: 13),),
                       ),
+
                     ),
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 15),
+                        padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp.1.000.000,-",
                           style: TextStyle(fontSize: 32),
@@ -81,38 +87,39 @@ class _HistoryState extends State<History> {
                       height: lebarBody * 0.01,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 50),
-                            child: Container(
+                      padding: const EdgeInsets.only(left: 48),
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 19),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
                               height: 30,
                               width: 100,
                               color: Color.fromARGB(255, 233, 220, 220),
                               child: Text("filter"),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 300),
-                            child: Container(
+                            Container(
                               height: 30,
                               width: 200,
                               color: Color.fromARGB(255, 231, 221, 221),
                               child: Text("tanggal"),
                             ),
-                          ),
-                          Container(
-                            height: 30,
-                            width: 100,
-                            color: Color.fromARGB(255, 221, 211, 211),
-                            child: Text("cari"),
-                          ),
-                        ],
+                           Container(
+                              height: 30,
+                              width: 150,
+                              color: Color.fromARGB(255, 231, 221, 221),
+                              child: Text("cari"),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
+                    SizedBox(
+                      height: 52,
+                    ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(left: 48,right: 19),
                       child: Container(
                         width: lebarBody,
                         height: 50,
