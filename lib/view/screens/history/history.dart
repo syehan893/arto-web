@@ -24,10 +24,9 @@ class _HistoryState extends State<History> {
       children: [
         Expanded(
           child: Container(
-            width: lebarBody * 0.20,
-            height: tinggiBody,
-            color: sideLeftColor
-          ),
+              width: lebarBody * 0.20,
+              height: tinggiBody,
+              color: sideLeftColor),
         ), //kiri
         Container(
           width: lebarBody * 0.60,
@@ -81,6 +80,45 @@ class _HistoryState extends State<History> {
                     SizedBox(
                       height: lebarBody * 0.01,
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 50),
+                            child: Container(
+                              height: 30,
+                              width: 100,
+                              color: Color.fromARGB(255, 233, 220, 220),
+                              child: Text("filter"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 300),
+                            child: Container(
+                              height: 30,
+                              width: 200,
+                              color: Color.fromARGB(255, 231, 221, 221),
+                              child: Text("tanggal"),
+                            ),
+                          ),
+                          Container(
+                            height: 30,
+                            width: 100,
+                            color: Color.fromARGB(255, 221, 211, 211),
+                            child: Text("cari"),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        width: lebarBody,
+                        height: 50,
+                        color: loginButtonColor,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -98,3 +136,5 @@ class _HistoryState extends State<History> {
     ));
   }
 }
+
+class nama {}
