@@ -39,9 +39,12 @@ class _NavigasiState extends State<Navigasi> {
             SizedBox(
               height: 63,
             ),
-            Text(
-              "menu",
-              style: TextStyle(fontSize: 13),
+            Container(
+              child: Text( 
+                "menu",
+                textAlign: TextAlign.end,
+                style: TextStyle(fontSize: 13,),
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -61,6 +64,10 @@ class _NavigasiState extends State<Navigasi> {
                 warna: _isClicked? Color.fromARGB(255, 51, 221, 9) : Colors.red
               ),
             ), // dasboard
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+            ),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -79,10 +86,14 @@ class _NavigasiState extends State<Navigasi> {
                 warna: _isClicked? Color.fromARGB(255, 65, 209, 8) : Colors.red
               ),
             ), // transfer
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+            ),
             GestureDetector(
               onTap: () {
                 setState(() {
-                  _isClicked = !_isClicked;
+                  _isClicked = true;
                 });
                 Navigator.push(
                   context,
@@ -97,6 +108,10 @@ class _NavigasiState extends State<Navigasi> {
                 warna: _isClicked? Colors.black : Colors.red
               ),
             ), // top up
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+            ),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -115,6 +130,10 @@ class _NavigasiState extends State<Navigasi> {
                 warna: _isClicked? Color.fromARGB(255, 10, 228, 39) : Colors.red
               ),
             ), // history
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+            ),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -133,6 +152,10 @@ class _NavigasiState extends State<Navigasi> {
                 warna: _isClicked? Color.fromARGB(255, 61, 194, 8) : Colors.red
               ),
             ), //request payment
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+            ),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -150,6 +173,10 @@ class _NavigasiState extends State<Navigasi> {
                 title: "help",
                 warna: _isClicked? Color.fromARGB(255, 85, 228, 18) : Colors.red
               ),
+            ),// help
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(height: 1,width: lebarBody,color: Colors.black,),
             ),
           ],
         ),
@@ -169,7 +196,7 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        color: Colors.white,
+        color: Colors.transparent,
         elevation: 0,
         child: Row(children: [
           Icon(
