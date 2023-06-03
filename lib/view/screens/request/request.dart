@@ -198,11 +198,11 @@ class Request extends StatelessWidget {
                 height: 14,
               ),
               Container(
-                height: tinggiBody * 0.4,
+                height: tinggiBody * 0.35,
                 width: lebarBody,
                 color: centerPageColor,
                 child: ListView(
-                  children: const [transfer()],
+                  children: [transfer()],
                 ),
               )
             ]),
