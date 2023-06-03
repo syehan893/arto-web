@@ -29,9 +29,9 @@ class _UserState extends State<User> {
                 userName: "Aditya Abdi",
                 email: "adityaabdi01@gmail.com",
               ),
-            ),
+            ), // user
             SizedBox(
-              height: 43,
+              height: 30,
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
@@ -40,7 +40,62 @@ class _UserState extends State<User> {
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
-            VRcard()
+            VRcard(), // virtual card
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 20,
+                    width: 160,
+                    child: Center(
+                        child: Text(
+                      "1232 4567 8927",
+                      style: TextStyle(fontSize: 15),
+                    )),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Colors.white,
+                    ),
+                  ), // no req
+                  Container(
+                    height: 20,
+                    width: 60,
+                    child: Center(
+                        child: Text(
+                      "COPY",
+                      style: TextStyle(fontSize: 15),
+                    )),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Colors.amber,
+                    ),
+                  ), // copy
+                ],
+              ),
+            ), // onmer reg
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "Promotion",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 150,
+                width: 292,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.grey,
+                ),
+              ),
+            )
           ],
         ),
       ),
@@ -113,7 +168,7 @@ class VRcard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 10, left: 10),
       child: Card(
-         color: loginButtonColor,
+        color: loginButtonColor,
         //color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
@@ -135,16 +190,29 @@ class VRcard extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Text("Rp.2.000.000,-",style: TextStyle(color: Colors.white),),
+                Text(
+                  "Rp.2.000.000,-",
+                  style: TextStyle(color: Colors.white),
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Container(height: 1,width: 100,color: Colors.white,),
+                Container(
+                  height: 1,
+                  width: 100,
+                  color: Colors.white,
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("ADITYA",style: TextStyle(color: Colors.white),),
-                Text("ABDI",style: TextStyle(color: Colors.white),),
+                Text(
+                  "ADITYA",
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text(
+                  "ABDI",
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
           ),

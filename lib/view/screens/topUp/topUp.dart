@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
+import 'package:ta_smt4/view/screens/user/user.dart';
 
 import '../../utils/warna.dart';
 
@@ -255,13 +256,7 @@ class _TopUpState extends State<TopUp> {
               ],
             ),
           ), //tengah
-          Expanded(
-            child: Container(
-              width: lebarBody * 0.20,
-              height: tinggiBody,
-              color: Colors.redAccent,
-            ),
-          ), //kanan
+         User(), //kanan
         ],
       ),
     );
