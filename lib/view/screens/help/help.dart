@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import '../../utils/warna.dart';
 
 class Help extends StatelessWidget {
@@ -14,13 +15,7 @@ class Help extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(
-            child: Container(
-              width: lebarBody * 0.20,
-              height: tinggiBody,
-              color: sideLeftColor,
-            ),
-          ),
+         Navigasi(),
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,

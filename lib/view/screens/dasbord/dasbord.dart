@@ -21,7 +21,7 @@ class Dasbord extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-         Naigasi(
+         Navigasi(
           
          ),
           //kiri

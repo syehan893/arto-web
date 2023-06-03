@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 
 import '../../utils/warna.dart';
 
@@ -23,13 +24,7 @@ class _TransferState extends State<Transfer> {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(
-            child: Container(
-              width: lebarBody * 0.20,
-              height: tinggiBody,
-              color: sideLeftColor,
-            ),
-          ), //kiri
+         Navigasi(), //kiri
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,

@@ -6,18 +6,20 @@ import 'package:ta_smt4/view/screens/request/request.dart';
 import 'package:ta_smt4/view/screens/topUp/topUp.dart';
 import 'package:ta_smt4/view/screens/transfer/transfer.dart';
 
-class Naigasi extends StatefulWidget {
-  const Naigasi({super.key});
+class Navigasi extends StatefulWidget {
+  const Navigasi({super.key});
 
   @override
-  State<Naigasi> createState() => _NaigasiState();
+  State<Navigasi> createState() => _NavigasiState();
 }
 
-class _NaigasiState extends State<Naigasi> {
+class _NavigasiState extends State<Navigasi> {
   @override
   Widget build(BuildContext context) {
     double tinggiBody = MediaQuery.of(context).size.height;
     double lebarBody = MediaQuery.of(context).size.width;
+
+     bool _isClicked = false;
 
     return Expanded(
       child: Container(
@@ -43,6 +45,9 @@ class _NaigasiState extends State<Naigasi> {
             ),
             GestureDetector(
               onTap: () {
+                setState(() {
+                  _isClicked = !_isClicked;
+                });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -53,10 +58,14 @@ class _NaigasiState extends State<Naigasi> {
               child: Menu(
                 icon: Icons.home_filled,
                 title: "dashboard",
+                warna: _isClicked? Color.fromARGB(255, 51, 221, 9) : Colors.red
               ),
             ), // dasboard
             GestureDetector(
               onTap: () {
+                setState(() {
+                  _isClicked = !_isClicked;
+                });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -67,10 +76,14 @@ class _NaigasiState extends State<Naigasi> {
               child: Menu(
                 icon: Icons.compare_arrows,
                 title: "transfer",
+                warna: _isClicked? Color.fromARGB(255, 65, 209, 8) : Colors.red
               ),
             ), // transfer
             GestureDetector(
               onTap: () {
+                setState(() {
+                  _isClicked = !_isClicked;
+                });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -79,12 +92,16 @@ class _NaigasiState extends State<Naigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.arrow_drop_up,
+                icon: Icons.arrow_drop_up_sharp,
                 title: "top up",
+                warna: _isClicked? Colors.black : Colors.red
               ),
             ), // top up
             GestureDetector(
               onTap: () {
+                setState(() {
+                  _isClicked = !_isClicked;
+                });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -93,12 +110,16 @@ class _NaigasiState extends State<Naigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.arrow_drop_up,
+                icon: Icons.history,
                 title: "hstory",
+                warna: _isClicked? Color.fromARGB(255, 10, 228, 39) : Colors.red
               ),
             ), // history
             GestureDetector(
               onTap: () {
+                setState(() {
+                  _isClicked = !_isClicked;
+                });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -107,12 +128,16 @@ class _NaigasiState extends State<Naigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.arrow_drop_up,
+                icon: Icons.request_page,
                 title: "request payment",
+                warna: _isClicked? Color.fromARGB(255, 61, 194, 8) : Colors.red
               ),
             ), //request payment
             GestureDetector(
               onTap: () {
+                setState(() {
+                  _isClicked = !_isClicked;
+                });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -121,8 +146,9 @@ class _NaigasiState extends State<Naigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.arrow_drop_up,
+                icon: Icons.support_agent,
                 title: "help",
+                warna: _isClicked? Color.fromARGB(255, 85, 228, 18) : Colors.red
               ),
             ),
           ],
@@ -133,9 +159,10 @@ class _NaigasiState extends State<Naigasi> {
 }
 
 class Menu extends StatelessWidget {
-  Menu({required this.icon, required this.title});
+  Menu({required this.icon, required this.title,required this.warna});
   final IconData icon;
   final String title;
+  final Color warna;
 
   //const Menu({super.key});
 
@@ -150,6 +177,6 @@ class Menu extends StatelessWidget {
             size: 30,
           ),
           Text(title),
-        ]));
+        ]),);
   }
 }
