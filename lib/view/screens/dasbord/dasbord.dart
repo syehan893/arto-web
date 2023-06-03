@@ -8,148 +8,37 @@ import 'package:ta_smt4/view/screens/history/history.dart';
 import 'package:ta_smt4/view/screens/topUp/topUp.dart';
 import 'package:ta_smt4/view/screens/transfer/transfer.dart';
 import '../../utils/warna.dart';
+import '../navigasi/navigasi.dart';
 
 class Dasbord extends StatelessWidget {
   const Dasbord({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double tinggiBody = MediaQuery.of(context).size.height;
+    double lebarBody = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      body: Center(
-        child: Container(
-          color: Colors.white60,
-          width: 200,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                width: 177,
-                height: 46,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Transfer(),
-                      ),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(23.0),
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(loginButtonColor),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(secunderColor)),
-                  child: Text("TRASNFER"),
-                ),
-              ),
-              Container(
-                width: 177,
-                height: 46,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => TopUp(),
-                      ),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(23.0),
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(loginButtonColor),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(secunderColor)),
-                  child: Text("TOP UP"),
-                ),
-              ),
-              Container(
-                width: 177,
-                height: 46,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => History(),
-                      ),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(23.0),
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(loginButtonColor),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(secunderColor)),
-                  child: Text("HISTORY"),
-                ),
-              ),
-              Container(
-                width: 177,
-                height: 46,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Request(),
-                      ),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(23.0),
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(loginButtonColor),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(secunderColor)),
-                  child: Text("REQUEST PAYMENT"),
-                ),
-              ),
-              Container(
-                width: 177,
-                height: 46,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Help(),
-                      ),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(23.0),
-                        ),
-                      ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(loginButtonColor),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(secunderColor)),
-                  child: Text("HELP help"),
-                ),
-              )
-            ],
+      body: Row(
+        children: [
+         Naigasi(
+          
+         ),
+          //kiri
+
+          Container(
+            width: lebarBody * 0.60,
+            height: tinggiBody,
           ),
-        ),
+          //tengah
+          Expanded(
+            child: Container(
+              width: lebarBody * 0.20,
+              height: tinggiBody,
+              color: Colors.redAccent,
+            ),
+          ), //kanan
+        ],
       ),
     );
   }
