@@ -19,7 +19,7 @@ class _NavigasiState extends State<Navigasi> {
     double tinggiBody = MediaQuery.of(context).size.height;
     double lebarBody = MediaQuery.of(context).size.width;
 
-     bool _isClicked = false;
+    bool _isClicked = false;
 
     return Expanded(
       child: Container(
@@ -27,6 +27,7 @@ class _NavigasiState extends State<Navigasi> {
         height: tinggiBody,
         color: Colors.grey,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 41, top: 43, right: 86),
@@ -39,13 +40,16 @@ class _NavigasiState extends State<Navigasi> {
             SizedBox(
               height: 63,
             ),
-            Container(
-              child: Text( 
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
                 "menu",
-                textAlign: TextAlign.end,
-                style: TextStyle(fontSize: 13,),
+                style: TextStyle(
+                  fontSize: 13,
+                ),
               ),
             ),
+
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -59,14 +63,19 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.home_filled,
-                title: "dashboard",
-                warna: _isClicked? Color.fromARGB(255, 51, 221, 9) : Colors.red
-              ),
+                  icon: Icons.home_filled,
+                  title: "dashboard",
+                  warna: _isClicked
+                      ? Color.fromARGB(255, 51, 221, 9)
+                      : Colors.red),
             ), // dasboard
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+              child: Container(
+                height: 1,
+                width: lebarBody,
+                color: Colors.black,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -81,14 +90,19 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.compare_arrows,
-                title: "transfer",
-                warna: _isClicked? Color.fromARGB(255, 65, 209, 8) : Colors.red
-              ),
+                  icon: Icons.compare_arrows,
+                  title: "transfer",
+                  warna: _isClicked
+                      ? Color.fromARGB(255, 65, 209, 8)
+                      : Colors.red),
             ), // transfer
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+              child: Container(
+                height: 1,
+                width: lebarBody,
+                color: Colors.black,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -103,14 +117,17 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.arrow_drop_up_sharp,
-                title: "top up",
-                warna: _isClicked? Colors.black : Colors.red
-              ),
+                  icon: Icons.arrow_drop_up_sharp,
+                  title: "top up",
+                  warna: _isClicked ? Colors.black : Colors.red),
             ), // top up
             Padding(
               padding: const EdgeInsets.all(10),
-              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+              child: Container(
+                height: 1,
+                width: lebarBody,
+                color: Colors.black,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -125,14 +142,19 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.history,
-                title: "hstory",
-                warna: _isClicked? Color.fromARGB(255, 10, 228, 39) : Colors.red
-              ),
+                  icon: Icons.history,
+                  title: "hstory",
+                  warna: _isClicked
+                      ? Color.fromARGB(255, 10, 228, 39)
+                      : Colors.red),
             ), // history
             Padding(
               padding: const EdgeInsets.all(10),
-              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+              child: Container(
+                height: 1,
+                width: lebarBody,
+                color: Colors.black,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -147,14 +169,19 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.request_page,
-                title: "request payment",
-                warna: _isClicked? Color.fromARGB(255, 61, 194, 8) : Colors.red
-              ),
+                  icon: Icons.request_page,
+                  title: "request payment",
+                  warna: _isClicked
+                      ? Color.fromARGB(255, 61, 194, 8)
+                      : Colors.red),
             ), //request payment
             Padding(
               padding: const EdgeInsets.all(10),
-              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+              child: Container(
+                height: 1,
+                width: lebarBody,
+                color: Colors.black,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -169,14 +196,19 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Menu(
-                icon: Icons.support_agent,
-                title: "help",
-                warna: _isClicked? Color.fromARGB(255, 85, 228, 18) : Colors.red
-              ),
-            ),// help
+                  icon: Icons.support_agent,
+                  title: "help",
+                  warna: _isClicked
+                      ? Color.fromARGB(255, 85, 228, 18)
+                      : Colors.red),
+            ), // help
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Container(height: 1,width: lebarBody,color: Colors.black,),
+              child: Container(
+                height: 1,
+                width: lebarBody,
+                color: Colors.black,
+              ),
             ),
           ],
         ),
@@ -186,7 +218,7 @@ class _NavigasiState extends State<Navigasi> {
 }
 
 class Menu extends StatelessWidget {
-  Menu({required this.icon, required this.title,required this.warna});
+  Menu({required this.icon, required this.title, required this.warna});
   final IconData icon;
   final String title;
   final Color warna;
@@ -196,14 +228,16 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        color: Colors.transparent,
-        elevation: 0,
-        child: Row(children: [
-          Icon(
-            icon,
-            size: 30,
-          ),
-          Text(title),
-        ]),);
+      color: Colors.transparent,
+      elevation: 0,
+      child: Row(children: [
+        Icon(
+          icon,
+          size: 30,
+        ),
+        SizedBox(width: 10,),
+        Text(title),
+      ]),
+    );
   }
 }
