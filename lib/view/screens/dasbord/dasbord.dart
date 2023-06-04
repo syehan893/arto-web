@@ -10,6 +10,7 @@ import 'package:ta_smt4/view/screens/transfer/transfer.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
 import '../navigasi/navigasi.dart';
+//import 'package:google_fonts/google_fonts.dart' as font;
 import 'package:google_fonts/google_fonts.dart';
 
 class Dasbord extends StatelessWidget {
@@ -42,13 +43,14 @@ class Dasbord extends StatelessWidget {
                         Container(
                           child: Text(
                             "Hi, Aditya Abdi",
-                            style: GoogleFonts.lato(fontSize: 32),
+                            style: GoogleFonts.lato(fontSize: 32)
                           ),
                         ),
                         Container(
                           child: Text(
                             "Welcome Back!",
-                            style: GoogleFonts.lato(fontSize: 20),
+                          
+                           style: GoogleFonts.lato(fontSize: 20),
                           ),
                         ),
                       ],
@@ -87,17 +89,14 @@ class Dasbord extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: lebarBody * 0.01,
+                        height: 20,
                       ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Container(
-                          padding: EdgeInsets.only(left: 15),
-                          child: Text(
-                            "pilih E-wallet",
-                          ),
-                        ),
-                      ),
+                      Container(
+                        height: 288,
+                        width: 746,
+                        color: Colors.grey,
+                      )
+                    
                     ],
                   ),
                 ),
