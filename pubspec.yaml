@@ -21,6 +21,7 @@ dependencies:
   flutter_local_notifications: ^13.0.0
   flutter_localizations:
     sdk: flutter
+  google_fonts: ^2.1.0
   flutter_randomcolor: ^1.0.14
   flutter_secure_storage: ^8.0.0
   fresh_dio: ^0.3.2
