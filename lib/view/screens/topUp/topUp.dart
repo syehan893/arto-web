@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 
@@ -24,21 +25,22 @@ class _TopUpState extends State<TopUp> {
     return Scaffold(
       body: Row(
         children: [
-         Navigasi(), //kiri
+          Navigasi(), //kiri
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
-            color: Colors.white54,
+            color: centerPageColor,
             child: Column(
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.only(left: 48, top: 32),
                     child: Container(
                       child: Text(
                         "Top Up",
-                        style: TextStyle(fontSize: 32),
+                        style: GoogleFonts.lato(
+                            fontSize: 32, fontWeight: FontWeight.bold),
                       ),
                     ), //judul
                   ),
@@ -47,7 +49,7 @@ class _TopUpState extends State<TopUp> {
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.only(left: 48, right: 19),
                   child: Container(
                     height: 2,
                     width: lebarBody,
@@ -61,17 +63,21 @@ class _TopUpState extends State<TopUp> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
-                          child: Text("your balance"),
+                          padding: EdgeInsets.only(left: 48),
+                          child: Text(
+                            "your balance",
+                            style: GoogleFonts.lato(fontSize: 13),
+                          ),
                         ),
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: 48),
                           child: Text(
                             "Rp.1.000.000,-",
-                            style: TextStyle(fontSize: 32),
+                            style: GoogleFonts.lato(
+                                fontSize: 32, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -81,7 +87,7 @@ class _TopUpState extends State<TopUp> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: 48),
                           child: Text(
                             "pilih E-wallet",
                           ),
@@ -95,7 +101,6 @@ class _TopUpState extends State<TopUp> {
                   child: Container(
                     height: tinggiBody * 0.05,
                     width: lebarBody,
-                    color: Colors.amber,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -104,27 +109,32 @@ class _TopUpState extends State<TopUp> {
                           icon: Icon(Icons.account_balance_wallet_outlined),
                           label: Text("dana"),
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.blue.shade300),
+                            minimumSize: Size(150, 45),
+                            primary: Colors.blue.shade300,
+                          ),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
                           icon: Icon(Icons.account_balance_wallet_outlined),
                           label: Text("ovo"),
                           style: ElevatedButton.styleFrom(
+                              minimumSize: Size(150, 45),
                               primary: Colors.purple.shade300),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
                           icon: Icon(Icons.account_balance_wallet_outlined),
                           label: Text("link aja"),
-                          style: ElevatedButton.styleFrom(primary: Colors.red),
+                          style: ElevatedButton.styleFrom(
+                              minimumSize: Size(150, 45), primary: Colors.red),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
                           icon: Icon(Icons.account_balance_wallet_outlined),
                           label: Text("gopay"),
-                          style:
-                              ElevatedButton.styleFrom(primary: Colors.green),
+                          style: ElevatedButton.styleFrom(
+                              minimumSize: Size(150, 45),
+                              primary: Colors.green),
                         )
                       ],
                     ),
@@ -138,7 +148,7 @@ class _TopUpState extends State<TopUp> {
                     width: lebarBody,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(255, 194, 118, 118),
+                      color: Colors.white,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -148,7 +158,7 @@ class _TopUpState extends State<TopUp> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: DropdownButton<String>(
@@ -183,7 +193,7 @@ class _TopUpState extends State<TopUp> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: TextField(
@@ -200,7 +210,7 @@ class _TopUpState extends State<TopUp> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: TextField(
@@ -217,7 +227,7 @@ class _TopUpState extends State<TopUp> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: TextField(
@@ -256,7 +266,7 @@ class _TopUpState extends State<TopUp> {
               ],
             ),
           ), //tengah
-         User(), //kanan
+          User(), //kanan
         ],
       ),
     );

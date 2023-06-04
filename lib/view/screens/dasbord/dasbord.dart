@@ -84,7 +84,7 @@ class Dasbord extends StatelessWidget {
                           padding: EdgeInsets.only(left: 35,right: 32),
                           child: Text(
                             "Rp.1.000.000,-",
-                            style: GoogleFonts.lato(fontSize: 32),
+                            style: GoogleFonts.lato(fontSize: 32,fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),

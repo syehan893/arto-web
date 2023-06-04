@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 
@@ -29,17 +30,17 @@ class _TransferState extends State<Transfer> {
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
-            color: Colors.white54,
+            color: centerPageColor,
             child: Column(
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.only(left: 48,top: 32),
                     child: Container(
                       child: Text(
                         "Transfer",
-                        style: TextStyle(fontSize: 32),
+                        style: GoogleFonts.lato(fontSize: 32,fontWeight: FontWeight.bold),
                       ),
                     ), //judul
                   ),
@@ -48,7 +49,7 @@ class _TransferState extends State<Transfer> {
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.only(left: 48,right: 19),
                   child: Container(
                     height: 2,
                     width: lebarBody,
@@ -62,17 +63,17 @@ class _TransferState extends State<Transfer> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
-                          child: Text("yout balance"),
+                          padding: EdgeInsets.only(left: 48),
+                          child: Text("yout balance",style: GoogleFonts.lato(fontSize: 13),),
                         ),
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: 48),
                           child: Text(
                             "Rp.1.000.000,-",
-                            style: TextStyle(fontSize: 32),
+                            style: GoogleFonts.lato(fontSize: 32,fontWeight: FontWeight.bold),
                           ),
                         ),
                       )
@@ -81,13 +82,13 @@ class _TransferState extends State<Transfer> {
                 ),
                 // kotak input
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(100, 20, 100, 20),
+                  padding: const EdgeInsets.only(left: 124,right: 124,top:28),
                   child: Container(
-                    height: tinggiBody * 0.60,
+                    height: tinggiBody * 0.65,
                     width: lebarBody,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(255, 101, 209, 80),
+                      color: Colors.white
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -97,7 +98,7 @@ class _TransferState extends State<Transfer> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: DropdownButton<String>(
@@ -130,7 +131,7 @@ class _TransferState extends State<Transfer> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: DropdownButton<String>(
@@ -158,7 +159,7 @@ class _TransferState extends State<Transfer> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: TextField(
@@ -175,7 +176,7 @@ class _TransferState extends State<Transfer> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: TextField(
@@ -192,7 +193,7 @@ class _TransferState extends State<Transfer> {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
-                              color: Colors.grey),
+                              color: columnLoginColor),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: TextField(
