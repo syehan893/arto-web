@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/dasbord/dasbord.dart';
 import 'package:ta_smt4/view/screens/help/help.dart';
 import 'package:ta_smt4/view/screens/history/history.dart';
 import 'package:ta_smt4/view/screens/request/request.dart';
 import 'package:ta_smt4/view/screens/topUp/topUp.dart';
 import 'package:ta_smt4/view/screens/transfer/transfer.dart';
+import 'package:ta_smt4/view/utils/warna.dart';
 
 class Navigasi extends StatefulWidget {
   const Navigasi({super.key});
@@ -25,7 +27,7 @@ class _NavigasiState extends State<Navigasi> {
       child: Container(
         width: lebarBody * 0.20,
         height: tinggiBody,
-        color: Colors.grey,
+        color: sideLeftColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -41,12 +43,10 @@ class _NavigasiState extends State<Navigasi> {
               height: 63,
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(left: 34),
               child: Text(
                 "menu",
-                style: TextStyle(
-                  fontSize: 13,
-                ),
+                style: GoogleFonts.lato(fontSize: 13)
               ),
             ),
 
@@ -62,15 +62,18 @@ class _NavigasiState extends State<Navigasi> {
                   ),
                 );
               },
-              child: Menu(
-                  icon: Icons.home_filled,
-                  title: "dashboard",
-                  warna: _isClicked
-                      ? Color.fromARGB(255, 51, 221, 9)
-                      : Colors.red),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 36,top: 28,bottom: 18),
+                child: Menu(
+                    icon: Icons.home_filled,
+                    title: "dashboard",
+                    warna: _isClicked
+                        ? Color.fromARGB(255, 51, 221, 9)
+                        : Colors.red),
+              ),
             ), // dasboard
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(left: 21,right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -89,15 +92,18 @@ class _NavigasiState extends State<Navigasi> {
                   ),
                 );
               },
-              child: Menu(
-                  icon: Icons.compare_arrows,
-                  title: "transfer",
-                  warna: _isClicked
-                      ? Color.fromARGB(255, 65, 209, 8)
-                      : Colors.red),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                child: Menu(
+                    icon: Icons.compare_arrows,
+                    title: "transfer",
+                    warna: _isClicked
+                        ? Color.fromARGB(255, 65, 209, 8)
+                        : Colors.red),
+              ),
             ), // transfer
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(left: 21,right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -116,13 +122,16 @@ class _NavigasiState extends State<Navigasi> {
                   ),
                 );
               },
-              child: Menu(
-                  icon: Icons.arrow_drop_up_sharp,
-                  title: "top up",
-                  warna: _isClicked ? Colors.black : Colors.red),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                child: Menu(
+                    icon: Icons.arrow_drop_up_rounded,
+                    title: "top up",
+                    warna: _isClicked ? Colors.black : Colors.red),
+              ),
             ), // top up
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.only(left: 21,right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -141,15 +150,18 @@ class _NavigasiState extends State<Navigasi> {
                   ),
                 );
               },
-              child: Menu(
-                  icon: Icons.history,
-                  title: "hstory",
-                  warna: _isClicked
-                      ? Color.fromARGB(255, 10, 228, 39)
-                      : Colors.red),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                child: Menu(
+                    icon: Icons.history,
+                    title: "hstory",
+                    warna: _isClicked
+                        ? Color.fromARGB(255, 10, 228, 39)
+                        : Colors.red),
+              ),
             ), // history
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.only(left: 21,right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -168,15 +180,18 @@ class _NavigasiState extends State<Navigasi> {
                   ),
                 );
               },
-              child: Menu(
-                  icon: Icons.request_page,
-                  title: "request payment",
-                  warna: _isClicked
-                      ? Color.fromARGB(255, 61, 194, 8)
-                      : Colors.red),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                child: Menu(
+                    icon: Icons.request_page,
+                    title: "request payment",
+                    warna: _isClicked
+                        ? Color.fromARGB(255, 61, 194, 8)
+                        : Colors.red),
+              ),
             ), //request payment
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.only(left: 21,right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -195,15 +210,18 @@ class _NavigasiState extends State<Navigasi> {
                   ),
                 );
               },
-              child: Menu(
-                  icon: Icons.support_agent,
-                  title: "help",
-                  warna: _isClicked
-                      ? Color.fromARGB(255, 85, 228, 18)
-                      : Colors.red),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                child: Menu(
+                    icon: Icons.support_agent,
+                    title: "help",
+                    warna: _isClicked
+                        ? Color.fromARGB(255, 85, 228, 18)
+                        : Colors.red),
+              ),
             ), // help
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(left: 21,right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -236,7 +254,8 @@ class Menu extends StatelessWidget {
           size: 30,
         ),
         SizedBox(width: 10,),
-        Text(title),
+        Text(title,style: GoogleFonts.lato(fontSize: 15),),
+
       ]),
     );
   }

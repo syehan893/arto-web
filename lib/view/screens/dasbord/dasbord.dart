@@ -30,7 +30,7 @@ class Dasbord extends StatelessWidget {
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
-            color: Colors.white54,
+            color: centerPageColor,
             child: Column(
               children: [
                 Align(
