@@ -11,6 +11,7 @@ import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
 import '../navigasi/navigasi.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class Dasbord extends StatelessWidget {
   const Dasbord({super.key});
 
@@ -22,12 +23,10 @@ class Dasbord extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-         Navigasi(
-          
-         ),
+          Navigasi(),
           //kiri
 
-         Container(
+          Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
             color: Colors.white54,
@@ -43,19 +42,19 @@ class Dasbord extends StatelessWidget {
                         Container(
                           child: Text(
                             "Hi, Aditya Abdi",
-                            style: GoogleFonts.lato(fontSize: 32),                          ),
+                            style: GoogleFonts.lato(fontSize: 32),
+                          ),
                         ),
                         Container(
                           child: Text(
                             "Welcome Back!",
-                            style: GoogleFonts.lato(fontSize: 20), 
+                            style: GoogleFonts.lato(fontSize: 20),
                           ),
                         ),
                       ],
                     ), //judul
                   ),
                 ),
-                
                 SizedBox(
                   height: 20,
                 ),
@@ -67,7 +66,6 @@ class Dasbord extends StatelessWidget {
                     color: Colors.black,
                   ), //garis
                 ),
-
                 Container(
                   child: Column(
                     children: [
@@ -105,7 +103,7 @@ class Dasbord extends StatelessWidget {
                 ),
               ],
             ),
-          ), 
+          ),
           //tengah
           User(), //kanan
         ],
