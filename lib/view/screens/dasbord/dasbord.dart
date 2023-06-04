@@ -36,14 +36,14 @@ class Dasbord extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.only(left: 35,right: 32,top: 32),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           child: Text(
                             "Hi, Aditya Abdi",
-                            style: GoogleFonts.lato(fontSize: 32)
+                            style: GoogleFonts.lato(fontSize: 32,fontWeight: FontWeight.bold)
                           ),
                         ),
                         Container(
@@ -61,7 +61,7 @@ class Dasbord extends StatelessWidget {
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.only(left: 35,right: 32),
                   child: Container(
                     height: 2,
                     width: lebarBody,
@@ -74,27 +74,31 @@ class Dasbord extends StatelessWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
-                          child: Text("your balance"),
+                          padding: EdgeInsets.only(left: 35,right: 32),
+                          child: Text("your balance",style: GoogleFonts.lato(fontSize: 13),),
                         ),
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: 35,right: 32),
                           child: Text(
                             "Rp.1.000.000,-",
-                            style: TextStyle(fontSize: 32),
+                            style: GoogleFonts.lato(fontSize: 32),
                           ),
                         ),
                       ),
                       SizedBox(
                         height: 20,
                       ),
-                      Container(
-                        height: 288,
-                        width: 746,
-                        color: Colors.grey,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 35,right: 32),
+                        child: Container(
+                          height: 288,
+                          width: lebarBody,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(22), color: Colors.grey,),
+                         
+                        ),
                       )
                     
                     ],
