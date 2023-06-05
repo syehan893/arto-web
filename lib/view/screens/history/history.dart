@@ -3,8 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
-
 import '../../utils/warna.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class History extends StatefulWidget {
   const History({super.key});
@@ -24,12 +24,12 @@ class _HistoryState extends State<History> {
     return Scaffold(
         body: Row(
       children: [
-       Navigasi(),
+        Navigasi(),
         //kiri
         Container(
           width: lebarBody * 0.60,
           height: tinggiBody,
-          color: Colors.white54,
+          color: centerPageColor,
           child: Column(
             children: [
               Align(
@@ -38,8 +38,8 @@ class _HistoryState extends State<History> {
                   padding: const EdgeInsets.only(left: 48, top: 31),
                   child: Container(
                     child: Text(
-                      "history",
-                      style: TextStyle(fontSize: 32),
+                      "History",
+                      style: GoogleFonts.lato(fontSize: 32),
                     ),
                   ), //judul
                 ),
@@ -67,7 +67,7 @@ class _HistoryState extends State<History> {
                         padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "your balance",
-                          style: TextStyle(fontSize: 13),
+                          style: GoogleFonts.lato(fontSize: 13),
                         ),
                       ),
                     ),
@@ -77,7 +77,7 @@ class _HistoryState extends State<History> {
                         padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp.1.000.000,-",
-                          style: TextStyle(fontSize: 32),
+                          style: GoogleFonts.lato(fontSize: 32),
                         ),
                       ),
                     ),
@@ -159,20 +159,20 @@ class _HistoryState extends State<History> {
                           children: [
                             Text(
                               "nama/jenis transaksi",
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.lato(color: Colors.white),
                             ),
                             Text(
                               "tanggal",
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.lato(color: Colors.white),
                             ),
                             Text(
                               "jumlah",
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.lato(color: Colors.white),
                             )
                           ],
                         ),
                       ),
-                    ),// kotak biru
+                    ), // kotak biru
                     SizedBox(
                       height: 14,
                     ),
@@ -180,17 +180,17 @@ class _HistoryState extends State<History> {
                       height: tinggiBody * 0.4,
                       width: lebarBody,
                       color: Colors.white,
-                      child: ListView(children: [transfer()],),
+                      child: ListView(
+                        children: [transfer()],
+                      ),
                     )
-                    
-                   
                   ],
                 ),
               ),
             ],
           ),
         ), //tengah
-       User() //kanan
+        User() //kanan
       ],
     ));
   }
@@ -206,9 +206,8 @@ class transfer extends StatelessWidget {
     var checkDate = new DateTime.now();
 
     return Padding(
-      padding: const EdgeInsets.only(left: 49,right: 19),
+      padding: const EdgeInsets.only(left: 49, right: 19),
       child: Column(
-        
         children: [
           Container(
             height: 50,
@@ -218,47 +217,46 @@ class transfer extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-           Container(
+          Container(
             height: 50,
             width: lebarBody,
             child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
-           Container(
+          Container(
             height: 50,
             width: lebarBody,
             child: builTransfer("TOP UP", "transfer masuk", checkDate, 20000),
           ),
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
-           Container(
+          Container(
             height: 50,
             width: lebarBody,
             child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
-           Container(
+          Container(
             height: 50,
             width: lebarBody,
             child: builTransfer("TOP UP", "transfer masuk", checkDate, 9000),
           ),
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
-           Container(
+          Container(
             height: 50,
             width: lebarBody,
             child: builTransfer("TOP UP", "transfer masuk", checkDate, 4000),
           ),
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
-         
         ],
       ),
     );
@@ -273,30 +271,31 @@ Card builTransfer(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     elevation: 5,
     child: Padding(
-      padding: EdgeInsets.only(left:10, right: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Icon(Icons.compare_arrows_outlined),
-          Column(
-            children: [
-              Text(title,style: TextStyle(fontSize: 14),),
-              Text(subTitle,style: TextStyle(fontSize: 10), )
-            ],
-          ),
-          Column(
-            children: [
-              Text(checkDate.toString())
-            ],
-          ),
-          Column(
-            children: [
-              Text(jumlah.toString())
-            ],
-          ),
-        ],
-      )
-    ),
+        padding: EdgeInsets.only(left: 10, right: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Icon(Icons.compare_arrows_outlined),
+            Column(
+              children: [
+                Text(
+                  title,
+                  style: GoogleFonts.lato(fontSize: 14),
+                ),
+                Text(
+                  subTitle,
+                  style: GoogleFonts.lato(fontSize: 10),
+                )
+              ],
+            ),
+            Column(
+              children: [Text(checkDate.toString())],
+            ),
+            Column(
+              children: [Text(jumlah.toString())],
+            ),
+          ],
+        )),
   );
 }
 

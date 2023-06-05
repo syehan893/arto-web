@@ -26,7 +26,7 @@ class _TransferState extends State<Transfer> {
     return Scaffold(
       body: Row(
         children: [
-         Navigasi(), //kiri
+          Navigasi(), //kiri
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -36,11 +36,12 @@ class _TransferState extends State<Transfer> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 48,top: 32),
+                    padding: const EdgeInsets.only(left: 48, top: 32),
                     child: Container(
                       child: Text(
                         "Transfer",
-                        style: GoogleFonts.lato(fontSize: 32,fontWeight: FontWeight.bold),
+                        style: GoogleFonts.lato(
+                            fontSize: 32, fontWeight: FontWeight.bold),
                       ),
                     ), //judul
                   ),
@@ -49,7 +50,7 @@ class _TransferState extends State<Transfer> {
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 48,right: 19),
+                  padding: const EdgeInsets.only(left: 48, right: 19),
                   child: Container(
                     height: 2,
                     width: lebarBody,
@@ -64,7 +65,10 @@ class _TransferState extends State<Transfer> {
                         alignment: Alignment.topLeft,
                         child: Container(
                           padding: EdgeInsets.only(left: 48),
-                          child: Text("yout balance",style: GoogleFonts.lato(fontSize: 13),),
+                          child: Text(
+                            "yout balance",
+                            style: GoogleFonts.lato(fontSize: 13),
+                          ),
                         ),
                       ),
                       Align(
@@ -73,7 +77,8 @@ class _TransferState extends State<Transfer> {
                           padding: EdgeInsets.only(left: 48),
                           child: Text(
                             "Rp.1.000.000,-",
-                            style: GoogleFonts.lato(fontSize: 32,fontWeight: FontWeight.bold),
+                            style: GoogleFonts.lato(
+                                fontSize: 32, fontWeight: FontWeight.bold),
                           ),
                         ),
                       )
@@ -82,14 +87,22 @@ class _TransferState extends State<Transfer> {
                 ),
                 // kotak input
                 Padding(
-                  padding: const EdgeInsets.only(left: 124,right: 124,top:28),
+                  padding:
+                      const EdgeInsets.only(left: 124, right: 124, top: 28),
                   child: Container(
-                    height: tinggiBody * 0.65,
-                    width: lebarBody,
+                    height: 565,
+                    width: 617,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white
-                    ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          )
+                        ]),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

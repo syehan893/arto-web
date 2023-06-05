@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ta_smt4/view/screens/dasbord/dasbord.dart';
 import '../../utils/warna.dart';
 import '../../utils/warna.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(LoginPage());
@@ -45,7 +46,7 @@ class LoginPage extends StatelessWidget {
                             height: 20,
                             child: Text(
                               "USERNAME",
-                              style: TextStyle(fontSize: 20),
+                              style: GoogleFonts.lato(fontSize: 20),
                             ),
                           ),
                         ),
@@ -77,7 +78,7 @@ class LoginPage extends StatelessWidget {
                             height: 20,
                             child: Text(
                               "PASSWORD",
-                              style: TextStyle(fontSize: 20),
+                              style: GoogleFonts.lato(fontSize: 20),
                             ),
                           ),
                         ),
@@ -123,7 +124,10 @@ class LoginPage extends StatelessWidget {
                                   foregroundColor:
                                       MaterialStateProperty.all<Color>(
                                           secunderColor)),
-                              child: Text("LOGIN")),
+                              child: Text(
+                                "LOGIN",
+                                style: GoogleFonts.lato(fontSize: 20),
+                              )),
                         )
                       ],
                     ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:ta_smt4/view/utils/warna.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class User extends StatefulWidget {
   const User({super.key});
@@ -34,18 +35,18 @@ class _UserState extends State<User> {
               height: 43,
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 14,left: 29),
+              padding: const EdgeInsets.only(bottom: 14, left: 29),
               child: Text(
                 "Virtual Card",
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                style: GoogleFonts.lato(color: Colors.white, fontSize: 24),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 26,right: 25),
+              padding: const EdgeInsets.only(left: 26, right: 25),
               child: VRcard(),
             ), // virtual card
             Padding(
-              padding: const EdgeInsets.only(left: 29,right: 25),
+              padding: const EdgeInsets.only(left: 29, right: 25),
               child: Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -55,21 +56,23 @@ class _UserState extends State<User> {
                     child: Center(
                         child: Text(
                       "1232 4567 8927",
-                      style: TextStyle(fontSize: 15),
+                      style: GoogleFonts.lato(fontSize: 15),
                     )),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
                       color: Colors.white,
                     ),
                   ), // no req
-                  SizedBox(width: 40,),
+                  SizedBox(
+                    width: 40,
+                  ),
                   Container(
                     height: 20,
                     width: 70,
                     child: Center(
                         child: Text(
                       "COPY",
-                      style: TextStyle(fontSize: 15),
+                      style: GoogleFonts.lato(fontSize: 15),
                     )),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
@@ -83,14 +86,14 @@ class _UserState extends State<User> {
               height: 49,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 26,right:25 ),
+              padding: const EdgeInsets.only(left: 26, right: 25),
               child: Text(
                 "Promotion",
-                style: TextStyle(fontSize: 24, color: Colors.white),
+                style: GoogleFonts.lato(fontSize: 24, color: Colors.white),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 26,right: 25),
+              padding: const EdgeInsets.only(left: 26, right: 25),
               child: Container(
                 height: 211,
                 width: 292,
@@ -143,9 +146,9 @@ class person extends StatelessWidget {
                 children: [
                   Text(
                     userName,
-                    style: TextStyle(fontSize: 12),
+                    style: GoogleFonts.lato(fontSize: 12),
                   ),
-                  Text(email, style: TextStyle(fontSize: 10))
+                  Text(email, style: GoogleFonts.lato(fontSize: 10))
                 ],
               ),
             ),
@@ -194,7 +197,7 @@ class VRcard extends StatelessWidget {
               ),
               Text(
                 "Rp.2.000.000,-",
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.lato(color: Colors.white),
               ),
               SizedBox(
                 height: 10,
@@ -209,11 +212,11 @@ class VRcard extends StatelessWidget {
               ),
               Text(
                 "ADITYA",
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.lato(color: Colors.white),
               ),
               Text(
                 "ABDI",
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.lato(color: Colors.white),
               ),
             ],
           ),

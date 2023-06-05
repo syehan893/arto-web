@@ -5,6 +5,7 @@ import 'package:ta_smt4/view/screens/history/history.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Request extends StatelessWidget {
   const Request({super.key});
@@ -30,7 +31,7 @@ class Request extends StatelessWidget {
                   child: Container(
                     child: Text(
                       "Request Payment",
-                      style: TextStyle(fontSize: 32),
+                      style: GoogleFonts.lato(fontSize: 32),
                     ),
                   ), //judul
                 ),
@@ -58,7 +59,7 @@ class Request extends StatelessWidget {
                         padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "Your Balance",
-                          style: TextStyle(fontSize: 13),
+                          style: GoogleFonts.lato(fontSize: 13),
                         ),
                       ),
                     )
@@ -77,7 +78,7 @@ class Request extends StatelessWidget {
                         padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp 1.998.000.000,-",
-                          style: TextStyle(fontSize: 32),
+                          style: GoogleFonts.lato(fontSize: 32),
                         ),
                       ),
                     )
@@ -101,7 +102,7 @@ class Request extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "23 januari",
-                            style: TextStyle(
+                            style: GoogleFonts.lato(
                               fontSize: 13,
                               color: Colors.black,
                             ),
@@ -130,7 +131,7 @@ class Request extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "search",
-                            style: TextStyle(
+                            style: GoogleFonts.lato(
                               fontSize: 13,
                               color: Colors.black,
                             ),
@@ -172,19 +173,19 @@ class Request extends StatelessWidget {
                     children: [
                       Text(
                         "Nama/Jenis Transaksi",
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.lato(color: Colors.white),
                       ),
                       Text(
                         "Tanggal",
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.lato(color: Colors.white),
                       ),
                       Text(
                         "Jumlah",
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.lato(color: Colors.white),
                       ),
                       Text(
                         "Tindakan",
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.lato(color: Colors.white),
                       ),
                     ],
                   ),
