@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
@@ -16,7 +17,7 @@ class Help extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-         Navigasi(),
+          Navigasi(),
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -29,7 +30,8 @@ class Help extends StatelessWidget {
                   child: Container(
                     child: Text(
                       "Help Center",
-                      style: TextStyle(fontSize: 32),
+                      style: GoogleFonts.lato(
+                          fontSize: 32, fontWeight: FontWeight.w400),
                     ),
                   ), //judul
                 ),
@@ -57,7 +59,8 @@ class Help extends StatelessWidget {
                         padding: EdgeInsets.only(left: 48),
                         child: Text(
                           "Hi, Randy",
-                          style: TextStyle(fontSize: 32),
+                          style: GoogleFonts.lato(
+                              fontSize: 32, fontWeight: FontWeight.w400),
                         ),
                       ),
                     )
@@ -73,7 +76,8 @@ class Help extends StatelessWidget {
                         padding: EdgeInsets.only(left: 52),
                         child: Text(
                           "Need a Help?",
-                          style: TextStyle(fontSize: 20),
+                          style: GoogleFonts.lato(
+                              fontSize: 20, fontWeight: FontWeight.w300),
                         ),
                       ),
                     )
@@ -97,7 +101,10 @@ class Help extends StatelessWidget {
                     ),
                     Text(
                       'Kontak Kami',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: GoogleFonts.lato(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
                     ),
                   ],
                 ),
@@ -173,7 +180,10 @@ class Help extends StatelessWidget {
                     ),
                     Text(
                       'Office Location',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: GoogleFonts.lato(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
                     ),
                   ],
                 ),
@@ -181,6 +191,12 @@ class Help extends StatelessWidget {
               SizedBox(
                 height: 14,
               ),
+              Container(
+                width: 739,
+                height: 362,
+                color: Colors.white,
+                child: Image.asset('web/assets/maps_location.png'),
+              )
             ]),
           ),
           User() // kanan
@@ -219,7 +235,7 @@ class Help extends StatelessWidget {
               ),
               Text(
                 name ?? '',
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -229,9 +245,9 @@ class Help extends StatelessWidget {
               ),
               Text(
                 telp ?? '',
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ],
