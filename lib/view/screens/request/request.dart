@@ -17,7 +17,7 @@ class Request extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-         Navigasi(),
+          Navigasi(),
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -41,7 +41,7 @@ class Request extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
-                  height: 1,
+                  height: 2,
                   width: lebarBody,
                   color: Colors.black,
                 ), //garis
@@ -203,7 +203,7 @@ class Request extends StatelessWidget {
               )
             ]),
           ), //kolom tengah
-         User() // kanan
+          User() // kanan
         ],
       ),
     );

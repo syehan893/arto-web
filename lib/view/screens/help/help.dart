@@ -42,7 +42,7 @@ class Help extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
-                  height: 1,
+                  height: 2,
                   width: lebarBody,
                   color: Colors.black,
                 ), //garis
@@ -194,7 +194,7 @@ class Help extends StatelessWidget {
               Container(
                 width: 739,
                 height: 362,
-                color: Colors.white,
+                color: centerPageColor,
                 child: Image.asset('web/assets/maps_location.png'),
               )
             ]),
