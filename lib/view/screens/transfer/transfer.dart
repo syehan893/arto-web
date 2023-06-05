@@ -91,7 +91,7 @@ class _TransferState extends State<Transfer> {
                       const EdgeInsets.only(left: 124, right: 124, top: 28),
                   child: Container(
                     height: 565,
-                    width: 617,
+                    width: 515,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),

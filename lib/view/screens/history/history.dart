@@ -179,7 +179,7 @@ class _HistoryState extends State<History> {
                     Container(
                       height: tinggiBody * 0.4,
                       width: lebarBody,
-                      color: Colors.white,
+                      color: centerPageColor,
                       child: ListView(
                         children: [transfer()],
                       ),

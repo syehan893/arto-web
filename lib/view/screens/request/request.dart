@@ -101,7 +101,7 @@ class Request extends StatelessWidget {
                         height: 35,
                         child: Center(
                           child: Text(
-                            "23 januari",
+                            "23 Januari",
                             style: GoogleFonts.lato(
                               fontSize: 13,
                               color: Colors.black,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ta_smt4/view/screens/dasbord/dasbord.dart';
+import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import 'package:ta_smt4/view/screens/help/help.dart';
 import 'package:ta_smt4/view/screens/history/history.dart';
 import 'package:ta_smt4/view/screens/request/request.dart';
@@ -44,10 +44,7 @@ class _NavigasiState extends State<Navigasi> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 34),
-              child: Text(
-                "menu",
-                style: GoogleFonts.lato(fontSize: 13)
-              ),
+              child: Text("Menu", style: GoogleFonts.lato(fontSize: 13)),
             ),
 
             GestureDetector(
@@ -58,22 +55,22 @@ class _NavigasiState extends State<Navigasi> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Dasbord(),
+                    builder: (context) => Dashboard(),
                   ),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 36,top: 28,bottom: 18),
+                padding: const EdgeInsets.only(left: 36, top: 28, bottom: 18),
                 child: Menu(
                     icon: Icons.home_filled,
-                    title: "dashboard",
+                    title: "Dashboard",
                     warna: _isClicked
                         ? Color.fromARGB(255, 51, 221, 9)
                         : Colors.red),
               ),
             ), // dasboard
             Padding(
-              padding: const EdgeInsets.only(left: 21,right: 42),
+              padding: const EdgeInsets.only(left: 21, right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -93,17 +90,17 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                padding: const EdgeInsets.only(left: 36, top: 18, bottom: 18),
                 child: Menu(
                     icon: Icons.compare_arrows,
-                    title: "transfer",
+                    title: "Transfer",
                     warna: _isClicked
                         ? Color.fromARGB(255, 65, 209, 8)
                         : Colors.red),
               ),
             ), // transfer
             Padding(
-              padding: const EdgeInsets.only(left: 21,right: 42),
+              padding: const EdgeInsets.only(left: 21, right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -123,15 +120,15 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                padding: const EdgeInsets.only(left: 36, top: 18, bottom: 18),
                 child: Menu(
                     icon: Icons.arrow_drop_up_rounded,
-                    title: "top up",
+                    title: "Top Up",
                     warna: _isClicked ? Colors.black : Colors.red),
               ),
             ), // top up
             Padding(
-              padding: const EdgeInsets.only(left: 21,right: 42),
+              padding: const EdgeInsets.only(left: 21, right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -151,17 +148,17 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                padding: const EdgeInsets.only(left: 36, top: 18, bottom: 18),
                 child: Menu(
                     icon: Icons.history,
-                    title: "hstory",
+                    title: "History",
                     warna: _isClicked
                         ? Color.fromARGB(255, 10, 228, 39)
                         : Colors.red),
               ),
             ), // history
             Padding(
-              padding: const EdgeInsets.only(left: 21,right: 42),
+              padding: const EdgeInsets.only(left: 21, right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -181,17 +178,17 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                padding: const EdgeInsets.only(left: 36, top: 18, bottom: 18),
                 child: Menu(
                     icon: Icons.request_page,
-                    title: "request payment",
+                    title: "Request Payment",
                     warna: _isClicked
                         ? Color.fromARGB(255, 61, 194, 8)
                         : Colors.red),
               ),
             ), //request payment
             Padding(
-              padding: const EdgeInsets.only(left: 21,right: 42),
+              padding: const EdgeInsets.only(left: 21, right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -211,17 +208,17 @@ class _NavigasiState extends State<Navigasi> {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 36,top: 18,bottom: 18),
+                padding: const EdgeInsets.only(left: 36, top: 18, bottom: 18),
                 child: Menu(
                     icon: Icons.support_agent,
-                    title: "help",
+                    title: "Help",
                     warna: _isClicked
                         ? Color.fromARGB(255, 85, 228, 18)
                         : Colors.red),
               ),
             ), // help
             Padding(
-              padding: const EdgeInsets.only(left: 21,right: 42),
+              padding: const EdgeInsets.only(left: 21, right: 42),
               child: Container(
                 height: 1,
                 width: lebarBody,
@@ -253,9 +250,13 @@ class Menu extends StatelessWidget {
           icon,
           size: 30,
         ),
-        SizedBox(width: 10,),
-        Text(title,style: GoogleFonts.lato(fontSize: 15),),
-
+        SizedBox(
+          width: 10,
+        ),
+        Text(
+          title,
+          style: GoogleFonts.lato(fontSize: 15),
+        ),
       ]),
     );
   }

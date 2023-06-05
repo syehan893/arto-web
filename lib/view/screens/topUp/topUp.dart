@@ -88,9 +88,8 @@ class _TopUpState extends State<TopUp> {
                         alignment: Alignment.topLeft,
                         child: Container(
                           padding: EdgeInsets.only(left: 48),
-                          child: Text(
-                            "pilih E-wallet",
-                          ),
+                          child: Text("Pilih E-wallet",
+                              style: GoogleFonts.lato(fontSize: 13)),
                         ),
                       ),
                     ],
@@ -144,12 +143,19 @@ class _TopUpState extends State<TopUp> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(100, 20, 100, 20),
                   child: Container(
-                    height: tinggiBody * 0.50,
-                    width: lebarBody,
+                    height: 565,
+                    width: 617,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white,
-                    ),
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          )
+                        ]),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

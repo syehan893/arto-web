@@ -13,8 +13,8 @@ import '../navigasi/navigasi.dart';
 //import 'package:google_fonts/google_fonts.dart' as font;
 import 'package:google_fonts/google_fonts.dart';
 
-class Dasbord extends StatelessWidget {
-  const Dasbord({super.key});
+class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
