@@ -57,7 +57,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 28,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 35, right: 32),
@@ -67,6 +67,9 @@ class Dashboard extends StatelessWidget {
                     color: Colors.black,
                   ), //garis
                 ),
+                SizedBox(
+                  height: 35,
+                ),
                 Container(
                   child: Column(
                     children: [
@@ -75,17 +78,20 @@ class Dashboard extends StatelessWidget {
                         child: Container(
                           padding: EdgeInsets.only(left: 35, right: 32),
                           child: Text(
-                            "your balance",
+                            "Your Balance",
                             style: GoogleFonts.lato(fontSize: 13),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
                           padding: EdgeInsets.only(left: 35, right: 32),
                           child: Text(
-                            "Rp.1.000.000,-",
+                            "Rp.2.000.000.000,-",
                             style: GoogleFonts.lato(
                                 fontSize: 32, fontWeight: FontWeight.bold),
                           ),
@@ -100,9 +106,115 @@ class Dashboard extends StatelessWidget {
                           height: 288,
                           width: lebarBody,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(22),
-                            color: Colors.grey,
+                              borderRadius: BorderRadius.circular(22),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 2,
+                                  blurRadius: 5,
+                                  offset: Offset(0, 3),
+                                )
+                              ]),
+                          child: Container(
+                            padding: const EdgeInsets.only(left: 20, top: 14),
+                            child: Text(
+                                style: GoogleFonts.lato(
+                                    fontSize: 24, fontWeight: FontWeight.w700),
+                                "Spending Activity"),
                           ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 32,
+                      ),
+                      Container(
+                          child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "Lastest transaction",
+                            style: GoogleFonts.lato(
+                                fontSize: 24, fontWeight: FontWeight.w700),
+                          ),
+                          SizedBox(
+                            width: 208,
+                          ),
+                          Text(
+                            "Subscriptions",
+                            style: GoogleFonts.lato(
+                                fontSize: 24, fontWeight: FontWeight.w700),
+                          ),
+                        ],
+                      )),
+                      SizedBox(
+                        height: 28,
+                      ),
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              width: 161,
+                              height: 85,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              width: 161,
+                              height: 85,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              width: 161,
+                              height: 85,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              width: 161,
+                              height: 85,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                          ],
                         ),
                       )
                     ],
