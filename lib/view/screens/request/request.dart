@@ -163,13 +163,14 @@ class Request extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
+                  padding: EdgeInsets.only(left: 10, right: 10),
                   width: lebarBody,
                   height: 29,
                   decoration: BoxDecoration(
                       color: loginButtonColor,
                       borderRadius: BorderRadius.circular(7)),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         "Nama/Jenis Transaksi",
@@ -195,11 +196,11 @@ class Request extends StatelessWidget {
                 height: 14,
               ),
               Container(
-                height: tinggiBody * 0.35,
+                height: tinggiBody * 0.45,
                 width: lebarBody,
                 color: centerPageColor,
                 child: ListView(
-                  children: [transfer()],
+                  children: const [transfer()],
                 ),
               )
             ]),
@@ -227,7 +228,12 @@ class transfer extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 10000),
+            child: buildRequest(
+              "TRANSFER",
+              "transfer masuk",
+              checkDate,
+              10000,
+            ),
           ),
           SizedBox(
             height: 10,
@@ -235,7 +241,7 @@ class transfer extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
+            child: buildRequest("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
           SizedBox(
             height: 10,
@@ -243,7 +249,7 @@ class transfer extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builTransfer("TOP UP", "transfer masuk", checkDate, 20000),
+            child: buildRequest("TOP UP", "transfer masuk", checkDate, 20000),
           ),
           SizedBox(
             height: 10,
@@ -251,7 +257,7 @@ class transfer extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
+            child: buildRequest("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
           SizedBox(
             height: 10,
@@ -259,7 +265,7 @@ class transfer extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builTransfer("TOP UP", "transfer masuk", checkDate, 9000),
+            child: buildRequest("TOP UP", "transfer masuk", checkDate, 9000),
           ),
           SizedBox(
             height: 10,
@@ -267,13 +273,59 @@ class transfer extends StatelessWidget {
           Container(
             height: 50,
             width: lebarBody,
-            child: builTransfer("TOP UP", "transfer masuk", checkDate, 4000),
+            child: buildRequest("TOP UP", "transfer masuk", checkDate, 4000),
           ),
           SizedBox(
             height: 10,
           ),
         ],
       ),
+    );
+  }
+
+  Card buildRequest(
+      String title, String subTitle, DateTime checkDate, int jumlah) {
+    return Card(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      elevation: 5,
+      child: Padding(
+          padding: EdgeInsets.only(left: 10, right: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.compare_arrows_outlined),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        title,
+                        style: GoogleFonts.lato(fontSize: 14),
+                      ),
+                      Text(
+                        subTitle,
+                        style: GoogleFonts.lato(fontSize: 10),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text(checkDate.toString())],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text(jumlah.toString())],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text(jumlah.toString())],
+              ),
+            ],
+          )),
     );
   }
 }

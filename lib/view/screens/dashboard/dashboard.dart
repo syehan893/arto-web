@@ -216,7 +216,112 @@ class Dashboard extends StatelessWidget {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                          child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "Lihat transaksi lainnya >>",
+                            style: GoogleFonts.lato(
+                                fontSize: 13, fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(
+                            width: 208,
+                          ),
+                          Text(
+                            "Lihat transaksi lainnya >>",
+                            style: GoogleFonts.lato(
+                                fontSize: 13, fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      )),
+                      SizedBox(
+                        height: 45,
+                      ),
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Container(
+                            padding: EdgeInsets.only(left: 55),
+                            child: Text(
+                              "Top Up",
+                              style: GoogleFonts.lato(
+                                  fontSize: 24, fontWeight: FontWeight.w700),
+                            )),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              width: 128,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.blue,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              width: 128,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.purple,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              width: 128,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.red,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                            Container(
+                              width: 128,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(7),
+                                  color: Colors.green,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    )
+                                  ]),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),

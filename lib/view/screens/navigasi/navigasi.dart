@@ -47,7 +47,7 @@ class _NavigasiState extends State<Navigasi> {
               child: Text("Menu", style: GoogleFonts.lato(fontSize: 13)),
             ),
 
-            GestureDetector(
+            InkWell(
               onTap: () {
                 setState(() {
                   _isClicked = !_isClicked;
@@ -77,7 +77,7 @@ class _NavigasiState extends State<Navigasi> {
                 color: Colors.black,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 setState(() {
                   _isClicked = !_isClicked;
@@ -107,7 +107,7 @@ class _NavigasiState extends State<Navigasi> {
                 color: Colors.black,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 setState(() {
                   _isClicked = true;
@@ -135,7 +135,7 @@ class _NavigasiState extends State<Navigasi> {
                 color: Colors.black,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 setState(() {
                   _isClicked = !_isClicked;
@@ -165,7 +165,7 @@ class _NavigasiState extends State<Navigasi> {
                 color: Colors.black,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 setState(() {
                   _isClicked = !_isClicked;
@@ -195,7 +195,7 @@ class _NavigasiState extends State<Navigasi> {
                 color: Colors.black,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 setState(() {
                   _isClicked = !_isClicked;

@@ -263,7 +263,7 @@ class transfer extends StatelessWidget {
   }
 }
 
-// card berobat
+// card
 Card builTransfer(
     String title, String subTitle, DateTime checkDate, int jumlah) {
   return Card(
@@ -273,25 +273,32 @@ Card builTransfer(
     child: Padding(
         padding: EdgeInsets.only(left: 10, right: 10),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.compare_arrows_outlined),
-            Column(
+            Row(
               children: [
-                Text(
-                  title,
-                  style: GoogleFonts.lato(fontSize: 14),
+                Icon(Icons.compare_arrows_outlined),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      title,
+                      style: GoogleFonts.lato(fontSize: 14),
+                    ),
+                    Text(
+                      subTitle,
+                      style: GoogleFonts.lato(fontSize: 10),
+                    )
+                  ],
                 ),
-                Text(
-                  subTitle,
-                  style: GoogleFonts.lato(fontSize: 10),
-                )
               ],
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [Text(checkDate.toString())],
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [Text(jumlah.toString())],
             ),
           ],
@@ -300,4 +307,3 @@ Card builTransfer(
 }
 
 //============================================================
-
