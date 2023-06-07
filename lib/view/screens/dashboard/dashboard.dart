@@ -335,3 +335,29 @@ class Dashboard extends StatelessWidget {
     );
   }
 }
+
+
+// import 'data_repository.dart';
+
+// class MyApp extends StatelessWidget {
+//   final DataRepository _dataRepository = DataRepository();
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return FutureBuilder<DataResponse>(
+//       future: _dataRepository.getData(),
+//       builder: (context, snapshot) {
+//         if (snapshot.hasData) {
+//           // tampilkan data
+//           return Text(snapshot.data.data.toString());
+//         } else if (snapshot.hasError) {
+//           // tampilkan pesan kesalahan
+//           return Text(snapshot.error.toString());
+//         } else {
+//           // tampilkan widget loading
+//           return CircularProgressIndicator();
+//         }
+//       },
+//     );
+//   }
+// }
