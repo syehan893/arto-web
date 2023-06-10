@@ -129,94 +129,72 @@ class Dashboard extends StatelessWidget {
                         height: 32,
                       ),
                       Container(
-                          child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            "Lastest transaction",
-                            style: GoogleFonts.lato(
-                                fontSize: 24, fontWeight: FontWeight.w700),
-                          ),
-                          SizedBox(
-                            width: 208,
-                          ),
-                          Text(
-                            "Subscriptions",
-                            style: GoogleFonts.lato(
-                                fontSize: 24, fontWeight: FontWeight.w700),
-                          ),
-                        ],
-                      )),
-                      SizedBox(
-                        height: 28,
-                      ),
-                      Container(
+                          child: Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Container(
-                              width: 161,
-                              height: 85,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
+                            Column(
+                              children: [
+                                Text(
+                                  "Lastest transaction",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                                Row(
+                                  children: [
+                                    LastestTrx(
+                                        harga: 8989,
+                                        tipy: "makanan",
+                                        nama: "ichiban",
+                                        waktu: DateTime.now()),
+                                    SizedBox(
+                                      width: 28,
+                                    ),
+                                    LastestTrx(
+                                        harga: 8989,
+                                        tipy: "makanan",
+                                        nama: "ichiban",
+                                        waktu: DateTime.now())
+                                  ],
+                                )
+                              ],
                             ),
                             Container(
-                              width: 161,
-                              height: 85,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
+                              height: 130,
+                              width: 1,
+                              color: Colors.black,
                             ),
-                            Container(
-                              width: 161,
-                              height: 85,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
-                            ),
-                            Container(
-                              width: 161,
-                              height: 85,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
+                            Column(
+                              children: [
+                                Text(
+                                  "Subsrciptions",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                                Row(
+                                  children: [
+                                    LastestTrx(
+                                        harga: 8989,
+                                        tipy: "makanan",
+                                        nama: "ichiban",
+                                        waktu: DateTime.now()),
+                                    SizedBox(
+                                      width: 28,
+                                    ),
+                                    LastestTrx(
+                                        harga: 8989,
+                                        tipy: "makanan",
+                                        nama: "ichiban",
+                                        waktu: DateTime.now())
+                                  ],
+                                )
+                              ],
                             ),
                           ],
                         ),
-                      ),
+                      )),
                       SizedBox(
                         height: 20,
                       ),
@@ -245,7 +223,7 @@ class Dashboard extends StatelessWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                            padding: EdgeInsets.only(left: 55),
+                            padding: EdgeInsets.only(left: 105),
                             child: Text(
                               "Top Up",
                               style: GoogleFonts.lato(
@@ -259,66 +237,10 @@ class Dashboard extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Container(
-                              width: 128,
-                              height: 45,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.blue,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
-                            ),
-                            Container(
-                              width: 128,
-                              height: 45,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.purple,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
-                            ),
-                            Container(
-                              width: 128,
-                              height: 45,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.red,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
-                            ),
-                            Container(
-                              width: 128,
-                              height: 45,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(7),
-                                  color: Colors.green,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    )
-                                  ]),
-                            ),
+                            topUp(nama: "DANA", warna: Colors.blue),
+                            topUp(nama: "OVO", warna: Colors.purple),
+                            topUp(nama: "linkAja!", warna: Colors.red),
+                            topUp(nama: "Gopay", warna: Colors.green)
                           ],
                         ),
                       ),
@@ -331,6 +253,111 @@ class Dashboard extends StatelessWidget {
           //tengah
           User(), //kanan
         ],
+      ),
+    );
+  }
+}
+
+class LastestTrx extends StatelessWidget {
+  LastestTrx(
+      {required this.harga,
+      required this.tipy,
+      required this.nama,
+      required this.waktu});
+  final int harga;
+  final String tipy;
+  final String nama;
+  final DateTime waktu;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Container(
+        width: 161,
+        height: 85,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: Offset(0, 3),
+              )
+            ]),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 25,
+                    width: 25,
+                    child: Icon(
+                      Icons.person_outline_sharp,
+                      color: Colors.white,
+                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(16)),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Rp.$harga,-",
+                        style: GoogleFonts.lato(fontSize: 12),
+                      ),
+                      Text(tipy, style: GoogleFonts.lato(fontSize: 10))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Text(nama),
+            Text(waktu.toString()),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class topUp extends StatelessWidget {
+  topUp({required this.nama, required this.warna});
+  final String nama;
+  final Color warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Container(
+        width: 128,
+        height: 45,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            color: warna,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: Offset(0, 3),
+              )
+            ]),
+        child: Row(children: [
+          Icon(Icons.account_balance_wallet_outlined,color: Colors.white,size: 40,),
+          SizedBox(width: 20,),
+          Text(nama,style:GoogleFonts.lato(color: Colors.white,fontWeight: FontWeight.w700),)
+        ]),
       ),
     );
   }
