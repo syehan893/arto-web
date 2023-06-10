@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ta_smt4/common/injection/injection.dart';
 import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import 'package:ta_smt4/view/screens/login/bloc/login_bloc.dart';
 import 'package:ta_smt4/view/screens/login/widgets/login_bloc_implementor.dart';
 import 'package:ta_smt4/view/screens/login/widgets/login_listener.dart';
 import '../../utils/warna.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<LoginBloc>(),
+      child: const LoginPage(),
+    );
+  }
+}
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
