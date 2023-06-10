@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import '../../utils/warna.dart';
-import '../../utils/warna.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
-  runApp(LoginPage());
-}
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   get columnLoginColor => null;
 
   @override
