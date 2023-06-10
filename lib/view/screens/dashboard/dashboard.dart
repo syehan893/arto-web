@@ -237,7 +237,7 @@ class Dashboard extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            topUp(nama: "DANA", warna: Colors.blue),
+                            topUp(nama: "DANA", warna: Colors.amber),
                             topUp(nama: "OVO", warna: Colors.purple),
                             topUp(nama: "linkAja!", warna: Colors.red),
                             topUp(nama: "Gopay", warna: Colors.green)
