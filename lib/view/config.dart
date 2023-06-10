@@ -12,7 +12,7 @@ class Config {
 
   static final _dev = {
     _keyIsLogEnable: true,
-    _keyBaseUrl: '13.229.119.11:3000/api/',
+    _keyBaseUrl: 'http://13.229.119.11:3000/api',
     _keyConnectTimeout: 30 * 1000,
     _keyReceiveTimeout: 30 * 1000,
   };

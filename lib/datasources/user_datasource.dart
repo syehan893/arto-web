@@ -1,40 +1,27 @@
-import 'package:dio/dio.dart';
-//import 'package:ta_smt4/models/userSource_model.dart';
+import 'package:injectable/injectable.dart';
+import 'package:ta_smt4/common/constants/endpoints.dart';
+import 'package:ta_smt4/common/network/api_result.dart';
+import 'package:ta_smt4/common/network/datasource_mixin.dart';
+import 'package:ta_smt4/common/network/dio_interceptors.dart';
+import 'package:ta_smt4/models/request/login_request.dart';
 
-class UserDatasource {
-  final Dio _dio = Dio();
-
-  Future<UserSource> getData() async {
-    try {
-      final response = await _dio.get('http://13.229.119.11:3000/api/data');
-      if (response.statusCode == 200) {
-        return UserSource.success(response.data);
-      } else {
-        return UserSource.error('Failed to load data');
-      }
-    } catch (e) {
-      return UserSource.error(e.toString());
-    }
-  }
-
-  Future<UserSource> postData(Map<String, dynamic> data) async {
-    try {
-      final response = await _dio.post('/data', data: data);
-      if (response.statusCode == 200) {
-        return UserSource.success(response.data);
-      } else {
-        return UserSource.error('Failed to post data');
-      }
-    } catch (e) {
-      return UserSource.error(e.toString());
-    }
-  }
+abstract class UserDatasource {
+  Future<APIResult> getUser();
 }
 
-class UserSource {
-  final dynamic data;
-  final String error;
+@LazySingleton(as: UserDatasource)
+class UserDatasourceImpl extends UserDatasource
+    with DatasourceExecutionMixin {
+  final HTTPClient httpClient;
 
-  UserSource.success(this.data) : error = "error";
-  UserSource.error(this.error) : data = null;
+  UserDatasourceImpl(this.httpClient);
+
+  @override
+  Future<APIResult> getUser() async {
+    return await exec(
+      httpClient.dio.get(
+        Endpoints.user.getUser,
+      ),
+    );
+  }
 }

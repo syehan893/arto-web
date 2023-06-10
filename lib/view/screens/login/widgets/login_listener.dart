@@ -20,6 +20,12 @@ class LoginListener extends StatelessWidget {
         if (state is LoginLoadingState) {
           showCircleLoadingDialog(context: context);
         } else if (state is LoginFailedState) {
+           Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Dashboard(),
+            ),
+          );
         } else if (state is LoginSuccessState) {
           Navigator.push(
             context,

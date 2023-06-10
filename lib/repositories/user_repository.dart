@@ -1,31 +1,43 @@
-import 'package:ta_smt4/datasources/user_datasource.dart';
+import 'dart:convert';
 
-class UserRepository {
-  final UserDatasource user_datasource = UserDatasource();
+import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
+import 'package:ta_smt4/models/user_model.dart';
 
-  Future<UserRespone> getData() async {
-    final response = await user_datasource.getData();
-    if (response.error != null) {
-      return UserRespone.error(response.error);
-    } else {
-      return UserRespone.success(response.data);
-    }
-  }
+import '../common/failures/base_failures.dart';
+import '../common/failures/common_failures.dart';
+import '../common/mixins/mixins.dart';
+import '../common/network/network_check.dart';
+import '../datasources/user_datasource.dart';
+import '../models/token.dart';
 
-  Future<UserRespone> postData(Map<String, dynamic> data) async {
-    final response = await user_datasource.postData(data);
-    if (response.error != null) {
-      return UserRespone.error(response.error);
-    } else {
-      return UserRespone.success(response.data);
-    }
-  }
+abstract class UserRepository {
+  Future<Either<BaseFailure, List<User>>> getUser();
 }
 
-class UserRespone {
-  final dynamic data;
-  final String error;
-
-  UserRespone.success(this.data) : error = "error";
-  UserRespone.error(this.error) : data = null;
+@LazySingleton(as: UserRepository)
+class UserRepositoryImpl extends UserRepository
+    with APIResultErrorChecker {
+  final NetworkCheck networkCheck;
+  final UserDatasource userDatasource;
+  UserRepositoryImpl({
+    required this.networkCheck,
+    required this.userDatasource,
+  });
+  @override
+  Future<Either<BaseFailure, List<User>>> getUser() async {
+    final result = await userDatasource.getUser();
+    return checkServiceResultError <List<User>>(
+      result: result,
+      errorPrefix: 'Login Error: ',
+      executeNext: () {
+        try {
+          List users = result as List;
+          return Right(users.map((e) => User.fromJson(e)).toList());
+        } catch (e) {
+          return Left(JSONParseFailure(error: e));
+        }
+      },
+    );
+  }
 }
