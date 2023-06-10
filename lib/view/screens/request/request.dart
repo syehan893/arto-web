@@ -317,9 +317,50 @@ class transfer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [Text(jumlah.toString())],
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text(jumlah.toString())],
+              Row(
+                children: [
+                  InkWell(
+                    focusColor: Colors.white,
+                    onTap: () {
+                      // Aksi yang dilakukan ketika logo ceklis diklik
+                    },
+                    child: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color.fromARGB(255, 20, 16, 221),
+                      ),
+                      child: Icon(
+                        Icons.check,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 3,
+                  ),
+                  InkWell(
+                    focusColor: Colors.white,
+                    onTap: () {
+                      // Aksi yang dilakukan ketika logo ceklis diklik
+                    },
+                    child: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.red,
+                      ),
+                      child: Icon(
+                        Icons.close,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           )),
