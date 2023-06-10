@@ -9,7 +9,6 @@ abstract class AuthenticationDatasource {
   Future<APIResult> login(LoginRequest request);
 }
 
-
 @LazySingleton(as: AuthenticationDatasource)
 class AuthenticationDatasourceImpl extends AuthenticationDatasource
     with DatasourceExecutionMixin {

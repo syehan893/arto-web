@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:ta_smt4/view/screens/history/history.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
@@ -18,7 +15,7 @@ class Request extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Navigasi(),
+          const Navigasi(),
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -36,7 +33,7 @@ class Request extends StatelessWidget {
                   ), //judul
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 52,
               ),
               Padding(
@@ -47,7 +44,7 @@ class Request extends StatelessWidget {
                   color: Colors.black,
                 ), //garis
               ),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               Container(
@@ -56,7 +53,7 @@ class Request extends StatelessWidget {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 48),
+                        padding: const EdgeInsets.only(left: 48),
                         child: Text(
                           "Your Balance",
                           style: GoogleFonts.lato(fontSize: 13),
@@ -66,7 +63,7 @@ class Request extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -75,7 +72,7 @@ class Request extends StatelessWidget {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 48),
+                        padding: const EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp 1.998.000.000,-",
                           style: GoogleFonts.lato(fontSize: 32),
@@ -85,20 +82,32 @@ class Request extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 39,
               ),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 52,
                     ),
                     Expanded(
                       child: Container(
                         width: double.infinity,
                         height: 35,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(7),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 3),
+                            )
+                          ],
+                        ),
                         child: Center(
                           child: Text(
                             "23 Januari",
@@ -108,6 +117,14 @@ class Request extends StatelessWidget {
                             ),
                           ),
                         ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 365,
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 35,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(7),
@@ -116,18 +133,10 @@ class Request extends StatelessWidget {
                               color: Colors.grey.withOpacity(0.5),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 3),
+                              offset: const Offset(0, 3),
                             )
                           ],
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 365,
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 35,
                         child: Center(
                           child: Text(
                             "search",
@@ -137,33 +146,21 @@ class Request extends StatelessWidget {
                             ),
                           ),
                         ),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(7),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 5,
-                              offset: Offset(0, 3),
-                            )
-                          ],
-                        ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 19,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 47,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   width: lebarBody,
                   height: 29,
                   decoration: BoxDecoration(
@@ -192,7 +189,7 @@ class Request extends StatelessWidget {
                   ),
                 ),
               ), // kotak biru
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -205,7 +202,7 @@ class Request extends StatelessWidget {
               )
             ]),
           ), //kolom tengah
-          User() // kanan
+          const User() // kanan
         ],
       ),
     );
@@ -219,13 +216,13 @@ class transfer extends StatelessWidget {
   Widget build(BuildContext context) {
     double tinggiBody = MediaQuery.of(context).size.height;
     double lebarBody = MediaQuery.of(context).size.width;
-    var checkDate = new DateTime.now();
+    var checkDate = DateTime.now();
 
     return Padding(
       padding: const EdgeInsets.only(left: 48, right: 19),
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: buildRequest(
@@ -235,47 +232,47 @@ class transfer extends StatelessWidget {
               10000,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: buildRequest("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: buildRequest("TOP UP", "transfer masuk", checkDate, 20000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: buildRequest("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: buildRequest("TOP UP", "transfer masuk", checkDate, 9000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: buildRequest("TOP UP", "transfer masuk", checkDate, 4000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],
@@ -290,13 +287,13 @@ class transfer extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       elevation: 5,
       child: Padding(
-          padding: EdgeInsets.only(left: 10, right: 10),
+          padding: const EdgeInsets.only(left: 10, right: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
-                  Icon(Icons.compare_arrows_outlined),
+                  const Icon(Icons.compare_arrows_outlined),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

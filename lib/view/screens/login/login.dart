@@ -3,7 +3,6 @@ import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import '../../utils/warna.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -36,10 +35,10 @@ class LoginPage extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        SizedBox(height: 39),
+                        const SizedBox(height: 39),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 16),
-                          child: Container(
+                          child: SizedBox(
                             // padding: EdgeInsets.fromLTRB(242, 39, 241, 16),
                             height: 20,
                             child: Text(
@@ -56,8 +55,8 @@ class LoginPage extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(23),
                                 color: Colors.grey),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
+                            child: const Padding(
+                              padding: EdgeInsets.all(10),
                               child: TextField(
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
@@ -66,12 +65,12 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 11,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 11),
-                          child: Container(
+                          child: SizedBox(
                             // padding: EdgeInsets.fromLTRB(242, 39, 241, 16),
                             height: 20,
                             child: Text(
@@ -86,18 +85,18 @@ class LoginPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: Colors.grey),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10),
                             child: TextField(
                               decoration:
                                   InputDecoration(border: InputBorder.none),
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 28,
                         ),
-                        Container(
+                        SizedBox(
                           width: 177,
                           height: 46,
                           child: ElevatedButton(
@@ -105,7 +104,7 @@ class LoginPage extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Dashboard(),
+                                    builder: (context) => const Dashboard(),
                                   ),
                                 );
                               },

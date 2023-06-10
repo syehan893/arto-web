@@ -1,12 +1,4 @@
-import 'package:easy_sidemenu/easy_sidemenu.dart' as menu;
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:ta_smt4/view/screens/help/help.dart';
-import 'package:ta_smt4/view/screens/request/request.dart';
-import 'package:ta_smt4/view/screens/history/history.dart';
-import 'package:ta_smt4/view/screens/topUp/topUp.dart';
-import 'package:ta_smt4/view/screens/transfer/transfer.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
 import '../navigasi/navigasi.dart';
@@ -24,7 +16,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Navigasi(),
+          const Navigasi(),
           //kiri
 
           Container(
@@ -56,7 +48,7 @@ class Dashboard extends StatelessWidget {
                     ), //judul
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 28,
                 ),
                 Padding(
@@ -67,7 +59,7 @@ class Dashboard extends StatelessWidget {
                     color: Colors.black,
                   ), //garis
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Container(
@@ -76,20 +68,20 @@ class Dashboard extends StatelessWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 35, right: 32),
+                          padding: const EdgeInsets.only(left: 35, right: 32),
                           child: Text(
                             "Your Balance",
                             style: GoogleFonts.lato(fontSize: 13),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 35, right: 32),
+                          padding: const EdgeInsets.only(left: 35, right: 32),
                           child: Text(
                             "Rp.2.000.000.000,-",
                             style: GoogleFonts.lato(
@@ -97,7 +89,7 @@ class Dashboard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Padding(
@@ -113,7 +105,7 @@ class Dashboard extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 2,
                                   blurRadius: 5,
-                                  offset: Offset(0, 3),
+                                  offset: const Offset(0, 3),
                                 )
                               ]),
                           child: Container(
@@ -125,7 +117,7 @@ class Dashboard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 32,
                       ),
                       Container(
@@ -148,7 +140,7 @@ class Dashboard extends StatelessWidget {
                                         tipy: "makanan",
                                         nama: "ichiban",
                                         waktu: DateTime.now()),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 28,
                                     ),
                                     LastestTrx(
@@ -180,7 +172,7 @@ class Dashboard extends StatelessWidget {
                                         tipy: "makanan",
                                         nama: "ichiban",
                                         waktu: DateTime.now()),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 28,
                                     ),
                                     LastestTrx(
@@ -195,7 +187,7 @@ class Dashboard extends StatelessWidget {
                           ],
                         ),
                       )),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
@@ -207,7 +199,7 @@ class Dashboard extends StatelessWidget {
                             style: GoogleFonts.lato(
                                 fontSize: 13, fontWeight: FontWeight.w400),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 208,
                           ),
                           Text(
@@ -217,26 +209,26 @@ class Dashboard extends StatelessWidget {
                           ),
                         ],
                       )),
-                      SizedBox(
+                      const SizedBox(
                         height: 45,
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                            padding: EdgeInsets.only(left: 105),
+                            padding: const EdgeInsets.only(left: 105),
                             child: Text(
                               "Top Up",
                               style: GoogleFonts.lato(
                                   fontSize: 24, fontWeight: FontWeight.w700),
                             )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
+                          children: const [
                             topUp(nama: "DANA", warna: Colors.amber),
                             topUp(nama: "OVO", warna: Colors.purple),
                             topUp(nama: "linkAja!", warna: Colors.red),
@@ -251,7 +243,7 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           //tengah
-          User(), //kanan
+          const User(), //kanan
         ],
       ),
     );
@@ -259,7 +251,7 @@ class Dashboard extends StatelessWidget {
 }
 
 class LastestTrx extends StatelessWidget {
-  LastestTrx(
+  const LastestTrx(
       {required this.harga,
       required this.tipy,
       required this.nama,
@@ -284,7 +276,7 @@ class LastestTrx extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 5,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               )
             ]),
         child: Column(
@@ -296,13 +288,13 @@ class LastestTrx extends StatelessWidget {
                   child: Container(
                     height: 25,
                     width: 25,
-                    child: Icon(
-                      Icons.person_outline_sharp,
-                      color: Colors.white,
-                    ),
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(16)),
+                    child: const Icon(
+                      Icons.person_outline_sharp,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 Padding(
@@ -330,7 +322,7 @@ class LastestTrx extends StatelessWidget {
 }
 
 class topUp extends StatelessWidget {
-  topUp({required this.nama, required this.warna});
+  const topUp({required this.nama, required this.warna});
   final String nama;
   final Color warna;
 
@@ -350,19 +342,28 @@ class topUp extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 5,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               )
             ]),
         child: Row(children: [
-          Icon(Icons.account_balance_wallet_outlined,color: Colors.white,size: 40,),
-          SizedBox(width: 20,),
-          Text(nama,style:GoogleFonts.lato(color: Colors.white,fontWeight: FontWeight.w700),)
+          const Icon(
+            Icons.account_balance_wallet_outlined,
+            color: Colors.white,
+            size: 40,
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          Text(
+            nama,
+            style: GoogleFonts.lato(
+                color: Colors.white, fontWeight: FontWeight.w700),
+          )
         ]),
       ),
     );
   }
 }
-
 
 // import 'data_repository.dart';
 

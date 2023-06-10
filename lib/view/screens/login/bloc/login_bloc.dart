@@ -32,7 +32,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginUpdateRequest>(_updateRequest);
     on<LoginSubmit>(_submit);
   }
-  
 
   void _updateRequest(LoginUpdateRequest event, emit) {
     final isValidPassword = !Validator.isEmpty(value: event.request.password);
@@ -68,4 +67,3 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     );
   }
 }
-

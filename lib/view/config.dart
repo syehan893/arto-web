@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 class Config {
-  static const environment = String.fromEnvironment('ENV',
-      defaultValue: 'DEV');
+  static const environment = String.fromEnvironment('ENV', defaultValue: 'DEV');
   static final Map<String, Map<String, dynamic>> _args = {
     'DEV': _dev,
   };

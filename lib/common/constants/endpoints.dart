@@ -5,6 +5,7 @@ final String _baseUrl = Config.baseUrl;
 class Endpoints {
   static const auth = _Auth();
 }
+
 class _Auth {
   const _Auth();
   String get _baseAuth => _baseUrl;

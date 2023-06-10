@@ -21,7 +21,7 @@ class _NavigasiState extends State<Navigasi> {
     double tinggiBody = MediaQuery.of(context).size.height;
     double lebarBody = MediaQuery.of(context).size.width;
 
-    bool _isClicked = false;
+    bool isClicked = false;
 
     return Expanded(
       child: Container(
@@ -33,13 +33,13 @@ class _NavigasiState extends State<Navigasi> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 41, top: 43, right: 86),
-              child: Container(
+              child: SizedBox(
                 width: 227,
                 height: 55,
                 child: Image.asset('web/assets/logo-arto.png'),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 63,
             ),
             Padding(
@@ -50,12 +50,12 @@ class _NavigasiState extends State<Navigasi> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _isClicked = !_isClicked;
+                  isClicked = !isClicked;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Dashboard(),
+                    builder: (context) => const Dashboard(),
                   ),
                 );
               },
@@ -64,8 +64,8 @@ class _NavigasiState extends State<Navigasi> {
                 child: Menu(
                     icon: Icons.home_filled,
                     title: "Dashboard",
-                    warna: _isClicked
-                        ? Color.fromARGB(255, 51, 221, 9)
+                    warna: isClicked
+                        ? const Color.fromARGB(255, 51, 221, 9)
                         : Colors.red),
               ),
             ), // dasboard
@@ -80,12 +80,12 @@ class _NavigasiState extends State<Navigasi> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _isClicked = !_isClicked;
+                  isClicked = !isClicked;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Transfer(),
+                    builder: (context) => const Transfer(),
                   ),
                 );
               },
@@ -94,8 +94,8 @@ class _NavigasiState extends State<Navigasi> {
                 child: Menu(
                     icon: Icons.compare_arrows,
                     title: "Transfer",
-                    warna: _isClicked
-                        ? Color.fromARGB(255, 65, 209, 8)
+                    warna: isClicked
+                        ? const Color.fromARGB(255, 65, 209, 8)
                         : Colors.red),
               ),
             ), // transfer
@@ -110,12 +110,12 @@ class _NavigasiState extends State<Navigasi> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _isClicked = true;
+                  isClicked = true;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TopUp(),
+                    builder: (context) => const TopUp(),
                   ),
                 );
               },
@@ -124,7 +124,7 @@ class _NavigasiState extends State<Navigasi> {
                 child: Menu(
                     icon: Icons.arrow_drop_up_rounded,
                     title: "Top Up",
-                    warna: _isClicked ? Colors.black : Colors.red),
+                    warna: isClicked ? Colors.black : Colors.red),
               ),
             ), // top up
             Padding(
@@ -138,12 +138,12 @@ class _NavigasiState extends State<Navigasi> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _isClicked = !_isClicked;
+                  isClicked = !isClicked;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => History(),
+                    builder: (context) => const History(),
                   ),
                 );
               },
@@ -152,8 +152,8 @@ class _NavigasiState extends State<Navigasi> {
                 child: Menu(
                     icon: Icons.history,
                     title: "History",
-                    warna: _isClicked
-                        ? Color.fromARGB(255, 10, 228, 39)
+                    warna: isClicked
+                        ? const Color.fromARGB(255, 10, 228, 39)
                         : Colors.red),
               ),
             ), // history
@@ -168,12 +168,12 @@ class _NavigasiState extends State<Navigasi> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _isClicked = !_isClicked;
+                  isClicked = !isClicked;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Request(),
+                    builder: (context) => const Request(),
                   ),
                 );
               },
@@ -182,8 +182,8 @@ class _NavigasiState extends State<Navigasi> {
                 child: Menu(
                     icon: Icons.request_page,
                     title: "Request Payment",
-                    warna: _isClicked
-                        ? Color.fromARGB(255, 61, 194, 8)
+                    warna: isClicked
+                        ? const Color.fromARGB(255, 61, 194, 8)
                         : Colors.red),
               ),
             ), //request payment
@@ -198,12 +198,12 @@ class _NavigasiState extends State<Navigasi> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _isClicked = !_isClicked;
+                  isClicked = !isClicked;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Help(),
+                    builder: (context) => const Help(),
                   ),
                 );
               },
@@ -212,8 +212,8 @@ class _NavigasiState extends State<Navigasi> {
                 child: Menu(
                     icon: Icons.support_agent,
                     title: "Help",
-                    warna: _isClicked
-                        ? Color.fromARGB(255, 85, 228, 18)
+                    warna: isClicked
+                        ? const Color.fromARGB(255, 85, 228, 18)
                         : Colors.red),
               ),
             ), // help
@@ -233,7 +233,7 @@ class _NavigasiState extends State<Navigasi> {
 }
 
 class Menu extends StatelessWidget {
-  Menu({required this.icon, required this.title, required this.warna});
+  const Menu({required this.icon, required this.title, required this.warna});
   final IconData icon;
   final String title;
   final Color warna;
@@ -250,7 +250,7 @@ class Menu extends StatelessWidget {
           icon,
           size: 30,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(

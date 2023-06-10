@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
@@ -26,7 +24,7 @@ class _TransferState extends State<Transfer> {
     return Scaffold(
       body: Row(
         children: [
-          Navigasi(), //kiri
+          const Navigasi(), //kiri
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -46,7 +44,7 @@ class _TransferState extends State<Transfer> {
                     ), //judul
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -64,7 +62,7 @@ class _TransferState extends State<Transfer> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 48),
+                          padding: const EdgeInsets.only(left: 48),
                           child: Text(
                             "yout balance",
                             style: GoogleFonts.lato(fontSize: 13),
@@ -74,7 +72,7 @@ class _TransferState extends State<Transfer> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 48),
+                          padding: const EdgeInsets.only(left: 48),
                           child: Text(
                             "Rp.1.000.000,-",
                             style: GoogleFonts.lato(
@@ -100,7 +98,7 @@ class _TransferState extends State<Transfer> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 2,
                             blurRadius: 5,
-                            offset: Offset(0, 3),
+                            offset: const Offset(0, 3),
                           )
                         ]),
                     child: Column(
@@ -121,8 +119,8 @@ class _TransferState extends State<Transfer> {
                                   selectedNominalTransfer = value!;
                                 });
                               },
-                              hint: Text("nominal transfer"),
-                              underline: SizedBox(),
+                              hint: const Text("nominal transfer"),
+                              underline: const SizedBox(),
                               isExpanded: true,
                               items: [
                                 "500.000",
@@ -132,8 +130,8 @@ class _TransferState extends State<Transfer> {
                               ]
                                   .map<DropdownMenuItem<String>>(
                                       (e) => DropdownMenuItem(
-                                            child: Text(e.toString()),
                                             value: e,
+                                            child: Text(e.toString()),
                                           ))
                                   .toList(),
                             ),
@@ -154,14 +152,14 @@ class _TransferState extends State<Transfer> {
                                   selectedBank = value!;
                                 });
                               },
-                              hint: Text("bank tujuan"),
-                              underline: SizedBox(),
+                              hint: const Text("bank tujuan"),
+                              underline: const SizedBox(),
                               isExpanded: true,
                               items: ["BRI", "BCA", "BNI", "PERMATA"]
                                   .map<DropdownMenuItem<String>>(
                                       (e) => DropdownMenuItem(
-                                            child: Text(e.toString()),
                                             value: e,
+                                            child: Text(e.toString()),
                                           ))
                                   .toList(),
                             ),
@@ -173,8 +171,8 @@ class _TransferState extends State<Transfer> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: columnLoginColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: TextField(
                               textAlign: TextAlign.start,
                               decoration: InputDecoration(
@@ -190,8 +188,8 @@ class _TransferState extends State<Transfer> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: columnLoginColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: TextField(
                               textAlign: TextAlign.start,
                               decoration: InputDecoration(
@@ -207,8 +205,8 @@ class _TransferState extends State<Transfer> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: columnLoginColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: TextField(
                               textAlign: TextAlign.start,
                               decoration: InputDecoration(
@@ -218,7 +216,7 @@ class _TransferState extends State<Transfer> {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: 177,
                           height: 46,
                           child: ElevatedButton(
@@ -236,7 +234,7 @@ class _TransferState extends State<Transfer> {
                                   foregroundColor:
                                       MaterialStateProperty.all<Color>(
                                           secunderColor)),
-                              child: Text("TRANSFER")),
+                              child: const Text("TRANSFER")),
                         )
                       ],
                     ),
@@ -245,7 +243,7 @@ class _TransferState extends State<Transfer> {
               ],
             ),
           ), //tengah
-          User() //kanan
+          const User() //kanan
         ],
       ),
     );

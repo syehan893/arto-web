@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
@@ -25,7 +23,7 @@ class _TopUpState extends State<TopUp> {
     return Scaffold(
       body: Row(
         children: [
-          Navigasi(), //kiri
+          const Navigasi(), //kiri
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -45,7 +43,7 @@ class _TopUpState extends State<TopUp> {
                     ), //judul
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -63,7 +61,7 @@ class _TopUpState extends State<TopUp> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 48),
+                          padding: const EdgeInsets.only(left: 48),
                           child: Text(
                             "your balance",
                             style: GoogleFonts.lato(fontSize: 13),
@@ -73,7 +71,7 @@ class _TopUpState extends State<TopUp> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 48),
+                          padding: const EdgeInsets.only(left: 48),
                           child: Text(
                             "Rp.1.000.000,-",
                             style: GoogleFonts.lato(
@@ -87,7 +85,7 @@ class _TopUpState extends State<TopUp> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Container(
-                          padding: EdgeInsets.only(left: 48),
+                          padding: const EdgeInsets.only(left: 48),
                           child: Text("Pilih E-wallet",
                               style: GoogleFonts.lato(fontSize: 13)),
                         ),
@@ -97,7 +95,7 @@ class _TopUpState extends State<TopUp> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Container(
+                  child: SizedBox(
                     height: tinggiBody * 0.05,
                     width: lebarBody,
                     child: Row(
@@ -105,35 +103,32 @@ class _TopUpState extends State<TopUp> {
                       children: [
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: Icon(Icons.account_balance_wallet_outlined),
-                          label: Text("dana"),
+                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          label: const Text("dana"),
                           style: ElevatedButton.styleFrom(
-                            minimumSize: Size(150, 45),
-                            primary: Colors.blue.shade300,
+                            minimumSize: const Size(150, 45), backgroundColor: Colors.blue.shade300,
                           ),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: Icon(Icons.account_balance_wallet_outlined),
-                          label: Text("ovo"),
+                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          label: const Text("ovo"),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: Size(150, 45),
-                              primary: Colors.purple.shade300),
+                              minimumSize: const Size(150, 45), backgroundColor: Colors.purple.shade300),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: Icon(Icons.account_balance_wallet_outlined),
-                          label: Text("link aja"),
+                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          label: const Text("link aja"),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: Size(150, 45), primary: Colors.red),
+                              minimumSize: const Size(150, 45), backgroundColor: Colors.red),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: Icon(Icons.account_balance_wallet_outlined),
-                          label: Text("gopay"),
+                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          label: const Text("gopay"),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: Size(150, 45),
-                              primary: Colors.green),
+                              minimumSize: const Size(150, 45), backgroundColor: Colors.green),
                         )
                       ],
                     ),
@@ -153,7 +148,7 @@ class _TopUpState extends State<TopUp> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 2,
                             blurRadius: 5,
-                            offset: Offset(0, 3),
+                            offset: const Offset(0, 3),
                           )
                         ]),
                     child: Column(
@@ -174,8 +169,8 @@ class _TopUpState extends State<TopUp> {
                                   selectedNominalTransfer = value!;
                                 });
                               },
-                              hint: Text("nominal Top Up"),
-                              underline: SizedBox(),
+                              hint: const Text("nominal Top Up"),
+                              underline: const SizedBox(),
                               isExpanded: true,
                               items: [
                                 "50.000",
@@ -186,8 +181,8 @@ class _TopUpState extends State<TopUp> {
                               ]
                                   .map<DropdownMenuItem<String>>(
                                       (e) => DropdownMenuItem(
-                                            child: Text(e.toString()),
                                             value: e,
+                                            child: Text(e.toString()),
                                           ))
                                   .toList(),
                             ),
@@ -200,8 +195,8 @@ class _TopUpState extends State<TopUp> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: columnLoginColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: TextField(
                               textAlign: TextAlign.start,
                               decoration: InputDecoration(
@@ -217,8 +212,8 @@ class _TopUpState extends State<TopUp> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: columnLoginColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: TextField(
                               textAlign: TextAlign.start,
                               decoration: InputDecoration(
@@ -234,8 +229,8 @@ class _TopUpState extends State<TopUp> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(23),
                               color: columnLoginColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: TextField(
                               textAlign: TextAlign.start,
                               decoration: InputDecoration(
@@ -245,7 +240,7 @@ class _TopUpState extends State<TopUp> {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: 177,
                           height: 46,
                           child: ElevatedButton(
@@ -263,7 +258,7 @@ class _TopUpState extends State<TopUp> {
                                   foregroundColor:
                                       MaterialStateProperty.all<Color>(
                                           secunderColor)),
-                              child: Text("TOP UP")),
+                              child: const Text("TOP UP")),
                         )
                       ],
                     ),
@@ -272,7 +267,7 @@ class _TopUpState extends State<TopUp> {
               ],
             ),
           ), //tengah
-          User(), //kanan
+          const User(), //kanan
         ],
       ),
     );

@@ -8,14 +8,14 @@ class Validator {
 
   static bool isEmailFormatValid({String? value, bool enableTestEmail = true}) {
     // return
-        // value != null && !enableTestEmail
-        //     ?
-        // RegularExpressions.email.hasMatch(value!);
+    // value != null && !enableTestEmail
+    //     ?
+    // RegularExpressions.email.hasMatch(value!);
     // :
-    if(!enableTestEmail){
+    if (!enableTestEmail) {
       return RegularExpressions.email.hasMatch(value!);
     }
-   return RegularExpressions.devEmail.hasMatch(value!);
+    return RegularExpressions.devEmail.hasMatch(value!);
   }
 
   static bool isPasswordFormatValid({String? value}) {

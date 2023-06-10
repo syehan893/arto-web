@@ -1,7 +1,4 @@
-
-import 'package:dio/dio.dart';
 import 'package:ta_smt4/datasources/user_datasource.dart';
-import 'package:ta_smt4/models/user_model.dart';
 
 class UserRepository {
   final UserDatasource user_datasource = UserDatasource();

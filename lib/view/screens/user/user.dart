@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:ta_smt4/view/utils/warna.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,14 +23,14 @@ class _UserState extends State<User> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 69, top: 27, right: 54),
+            const Padding(
+              padding: EdgeInsets.only(left: 69, top: 27, right: 54),
               child: person(
                 userName: "Aditya Abdi",
                 email: "adityaabdi01@gmail.com",
               ),
             ), // user
-            SizedBox(
+            const SizedBox(
               height: 43,
             ),
             Padding(
@@ -41,8 +40,8 @@ class _UserState extends State<User> {
                 style: GoogleFonts.lato(color: Colors.white, fontSize: 24),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 26, right: 25),
+            const Padding(
+              padding: EdgeInsets.only(left: 26, right: 25),
               child: VRcard(),
             ), // virtual card
             Padding(
@@ -53,36 +52,36 @@ class _UserState extends State<User> {
                   Container(
                     height: 20,
                     width: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Colors.white,
+                    ),
                     child: Center(
                         child: Text(
                       "1232 4567 8927",
                       style: GoogleFonts.lato(fontSize: 15),
                     )),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      color: Colors.white,
-                    ),
                   ), // no req
-                  SizedBox(
+                  const SizedBox(
                     width: 40,
                   ),
                   Container(
                     height: 20,
                     width: 70,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Colors.amber,
+                    ),
                     child: Center(
                         child: Text(
                       "COPY",
                       style: GoogleFonts.lato(fontSize: 15),
                     )),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      color: Colors.amber,
-                    ),
                   ), // copy
                 ],
               ),
             ), // onmer reg
-            SizedBox(
+            const SizedBox(
               height: 49,
             ),
             Padding(
@@ -111,7 +110,7 @@ class _UserState extends State<User> {
 }
 
 class person extends StatelessWidget {
-  person({required this.userName, required this.email});
+  const person({required this.userName, required this.email});
   final String userName;
   final String email;
 
@@ -120,7 +119,7 @@ class person extends StatelessWidget {
     return Card(
       color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      child: Container(
+      child: SizedBox(
         height: 48,
         width: 222,
         child: Row(
@@ -130,13 +129,13 @@ class person extends StatelessWidget {
               child: Container(
                 height: 25,
                 width: 25,
-                child: Icon(
-                  Icons.person_outline_sharp,
-                  color: Colors.white,
-                ),
                 decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(16)),
+                child: const Icon(
+                  Icons.person_outline_sharp,
+                  color: Colors.white,
+                ),
               ),
             ),
             Padding(
@@ -153,7 +152,7 @@ class person extends StatelessWidget {
               ),
             ),
             IconButton(
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               color: Colors.black,
               iconSize: 20,
               onPressed: () {
@@ -178,7 +177,7 @@ class VRcard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
       ),
-      child: Container(
+      child: SizedBox(
         height: 171,
         width: 294,
         //child: Image.asset('web/assets/logo-arto.png'),
@@ -187,19 +186,19 @@ class VRcard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SizedBox(
                 height: 30,
                 width: 50,
                 child: Image.asset('web/assets/visa.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(
                 "Rp.2.000.000,-",
                 style: GoogleFonts.lato(color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -207,7 +206,7 @@ class VRcard extends StatelessWidget {
                 width: 100,
                 color: Colors.white,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(

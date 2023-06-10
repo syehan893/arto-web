@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ta_smt4/view/screens/login/login.dart';
-import 'view/utils/warna.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => const LoginPage(),
       },
       initialRoute: "/",
     );

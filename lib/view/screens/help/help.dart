@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
@@ -17,7 +15,7 @@ class Help extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Navigasi(),
+          const Navigasi(),
           Container(
             width: lebarBody * 0.60,
             height: tinggiBody,
@@ -36,7 +34,7 @@ class Help extends StatelessWidget {
                   ), //judul
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 52,
               ),
               Padding(
@@ -47,7 +45,7 @@ class Help extends StatelessWidget {
                   color: Colors.black,
                 ), //garis
               ),
-              SizedBox(
+              const SizedBox(
                 height: 38,
               ),
               Container(
@@ -56,7 +54,7 @@ class Help extends StatelessWidget {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 48),
+                        padding: const EdgeInsets.only(left: 48),
                         child: Text(
                           "Hi, Randy",
                           style: GoogleFonts.lato(
@@ -73,7 +71,7 @@ class Help extends StatelessWidget {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 52),
+                        padding: const EdgeInsets.only(left: 52),
                         child: Text(
                           "Need a Help?",
                           style: GoogleFonts.lato(
@@ -84,11 +82,11 @@ class Help extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 38,
               ),
               Container(
-                margin: EdgeInsets.only(left: 52, right: 19),
+                margin: const EdgeInsets.only(left: 52, right: 19),
                 height: 29,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
@@ -96,7 +94,7 @@ class Help extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 11,
                     ),
                     Text(
@@ -109,41 +107,41 @@ class Help extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 52,
                     ),
                     helpInfoCard(
                         image: 'web/assets/online_support.png',
                         name: 'Call Center 1',
                         telp: '0251 1234 5670'),
-                    SizedBox(
+                    const SizedBox(
                       width: 22,
                     ),
                     helpInfoCard(
                         image: 'web/assets/logo_wa.png',
                         name: 'Official Whatsapp',
                         telp: '0251 1234 5670'),
-                    SizedBox(
+                    const SizedBox(
                       width: 19,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 52,
                     ),
                     helpInfoCard(
@@ -157,17 +155,17 @@ class Help extends StatelessWidget {
                         image: 'web/assets/logo_telegram.png',
                         name: 'Official Telegram',
                         telp: '0251 1234 5670'),
-                    SizedBox(
+                    const SizedBox(
                       width: 19,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 34,
               ),
               Container(
-                margin: EdgeInsets.only(left: 52, right: 19),
+                margin: const EdgeInsets.only(left: 52, right: 19),
                 height: 29,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
@@ -175,7 +173,7 @@ class Help extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 11,
                     ),
                     Text(
@@ -188,7 +186,7 @@ class Help extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -199,7 +197,7 @@ class Help extends StatelessWidget {
               )
             ]),
           ),
-          User() // kanan
+          const User() // kanan
         ],
       ),
     );
@@ -230,7 +228,7 @@ class Help extends StatelessWidget {
                 width: 24,
                 height: 24,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 23,
               ),
               Text(
@@ -240,7 +238,7 @@ class Help extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 23,
               ),
               Text(

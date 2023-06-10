@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ta_smt4/view/screens/navigasi/navigasi.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
@@ -24,7 +22,7 @@ class _HistoryState extends State<History> {
     return Scaffold(
         body: Row(
       children: [
-        Navigasi(),
+        const Navigasi(),
         //kiri
         Container(
           width: lebarBody * 0.60,
@@ -44,7 +42,7 @@ class _HistoryState extends State<History> {
                   ), //judul
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 52,
               ),
               Padding(
@@ -55,7 +53,7 @@ class _HistoryState extends State<History> {
                   color: Colors.black,
                 ), //garis
               ),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               Container(
@@ -64,7 +62,7 @@ class _HistoryState extends State<History> {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 48),
+                        padding: const EdgeInsets.only(left: 48),
                         child: Text(
                           "your balance",
                           style: GoogleFonts.lato(fontSize: 13),
@@ -74,7 +72,7 @@ class _HistoryState extends State<History> {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
-                        padding: EdgeInsets.only(left: 48),
+                        padding: const EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp.1.000.000,-",
                           style: GoogleFonts.lato(fontSize: 32),
@@ -94,7 +92,6 @@ class _HistoryState extends State<History> {
                             Container(
                               height: 30,
                               width: 100,
-                              child: Center(child: Text("filter")),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(7),
@@ -103,14 +100,14 @@ class _HistoryState extends State<History> {
                                       color: Colors.grey.withOpacity(0.5),
                                       spreadRadius: 2,
                                       blurRadius: 5,
-                                      offset: Offset(0, 3),
+                                      offset: const Offset(0, 3),
                                     )
                                   ]),
+                              child: const Center(child: Text("filter")),
                             ),
                             Container(
                               height: 30,
                               width: 200,
-                              child: Center(child: Text("tanggal")),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(7),
@@ -119,14 +116,14 @@ class _HistoryState extends State<History> {
                                       color: Colors.grey.withOpacity(0.5),
                                       spreadRadius: 2,
                                       blurRadius: 5,
-                                      offset: Offset(0, 3),
+                                      offset: const Offset(0, 3),
                                     )
                                   ]),
+                              child: const Center(child: Text("tanggal")),
                             ),
                             Container(
                               height: 30,
                               width: 150,
-                              child: Center(child: Text("cari")),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(7),
@@ -135,15 +132,16 @@ class _HistoryState extends State<History> {
                                       color: Colors.grey.withOpacity(0.5),
                                       spreadRadius: 2,
                                       blurRadius: 5,
-                                      offset: Offset(0, 3),
+                                      offset: const Offset(0, 3),
                                     )
                                   ]),
+                              child: const Center(child: Text("cari")),
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 52,
                     ),
                     Padding(
@@ -173,7 +171,7 @@ class _HistoryState extends State<History> {
                         ),
                       ),
                     ), // kotak biru
-                    SizedBox(
+                    const SizedBox(
                       height: 14,
                     ),
                     Container(
@@ -181,7 +179,7 @@ class _HistoryState extends State<History> {
                       width: lebarBody,
                       color: centerPageColor,
                       child: ListView(
-                        children: [transfer()],
+                        children: const [transfer()],
                       ),
                     )
                   ],
@@ -190,7 +188,7 @@ class _HistoryState extends State<History> {
             ],
           ),
         ), //tengah
-        User() //kanan
+        const User() //kanan
       ],
     ));
   }
@@ -203,58 +201,58 @@ class transfer extends StatelessWidget {
   Widget build(BuildContext context) {
     double tinggiBody = MediaQuery.of(context).size.height;
     double lebarBody = MediaQuery.of(context).size.width;
-    var checkDate = new DateTime.now();
+    var checkDate = DateTime.now();
 
     return Padding(
       padding: const EdgeInsets.only(left: 49, right: 19),
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: builTransfer("TRANSFER", "transfer masuk", checkDate, 10000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: builTransfer("TOP UP", "transfer masuk", checkDate, 20000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: builTransfer("TRANSFER", "transfer masuk", checkDate, 70000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: builTransfer("TOP UP", "transfer masuk", checkDate, 9000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: lebarBody,
             child: builTransfer("TOP UP", "transfer masuk", checkDate, 4000),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],
@@ -271,13 +269,13 @@ Card builTransfer(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     elevation: 5,
     child: Padding(
-        padding: EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
-                Icon(Icons.compare_arrows_outlined),
+                const Icon(Icons.compare_arrows_outlined),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

@@ -1,4 +1,3 @@
-
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -44,8 +43,7 @@ abstract class RegisterModule {
       );
 
   Future<Response> _refreshToken(Token token) async {
-    return Dio(ArtoDioOptions().baseOptions)
-        .post(Endpoints.auth.login, data: {
+    return Dio(ArtoDioOptions().baseOptions).post(Endpoints.auth.login, data: {
       'token': token.refreshToken,
     });
   }
