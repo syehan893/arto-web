@@ -16,15 +16,16 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i8;
 
-import '../../datasources/auth_datasource.dart' as _i12;
-import '../../datasources/user_datasource.dart' as _i11;
-import '../../repositories/auth_repository.dart' as _i13;
-import '../../repositories/user_repository.dart' as _i10;
-import '../../view/screens/login/bloc/login_bloc.dart' as _i14;
-import '../../view/screens/user/bloc/user_bloc.dart' as _i9;
+import '../../datasources/auth_datasource.dart' as _i13;
+import '../../datasources/user_datasource.dart' as _i12;
+import '../../repositories/auth_repository.dart' as _i14;
+import '../../repositories/user_repository.dart' as _i11;
+import '../../view/screens/login/bloc/login_bloc.dart' as _i15;
+import '../../view/screens/splash/cubit/splash_cubit.dart' as _i9;
+import '../../view/screens/user/bloc/user_bloc.dart' as _i10;
 import '../network/dio_interceptors.dart' as _i6;
 import '../network/network_check.dart' as _i7;
-import 'register_module.dart' as _i15;
+import 'register_module.dart' as _i16;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -50,27 +51,29 @@ extension GetItInjectableX on _i1.GetIt {
       () => registerModule.sharedPreferences,
       preResolve: true,
     );
-    gh.factory<_i9.UserBloc>(
-        () => _i9.UserBloc(userRepository: gh<_i10.UserRepository>()));
-    gh.lazySingleton<_i11.UserDatasource>(
-        () => _i11.UserDatasourceImpl(gh<_i6.HTTPClient>()));
-    gh.lazySingleton<_i10.UserRepository>(() => _i10.UserRepositoryImpl(
+    gh.factory<_i9.SplashCubit>(
+        () => _i9.SplashCubit(gh<_i5.FlutterSecureStorage>()));
+    gh.factory<_i10.UserBloc>(
+        () => _i10.UserBloc(userRepository: gh<_i11.UserRepository>()));
+    gh.lazySingleton<_i12.UserDatasource>(
+        () => _i12.UserDatasourceImpl(gh<_i6.HTTPClient>()));
+    gh.lazySingleton<_i11.UserRepository>(() => _i11.UserRepositoryImpl(
           networkCheck: gh<_i7.NetworkCheck>(),
-          userDatasource: gh<_i11.UserDatasource>(),
+          userDatasource: gh<_i12.UserDatasource>(),
         ));
-    gh.lazySingleton<_i12.AuthenticationDatasource>(
-        () => _i12.AuthenticationDatasourceImpl(gh<_i6.HTTPClient>()));
-    gh.lazySingleton<_i13.AuthenticationRepository>(
-        () => _i13.AuthenticationRepositoryImpl(
+    gh.lazySingleton<_i13.AuthenticationDatasource>(
+        () => _i13.AuthenticationDatasourceImpl(gh<_i6.HTTPClient>()));
+    gh.lazySingleton<_i14.AuthenticationRepository>(
+        () => _i14.AuthenticationRepositoryImpl(
               networkCheck: gh<_i7.NetworkCheck>(),
-              authenticationDatasource: gh<_i12.AuthenticationDatasource>(),
+              authenticationDatasource: gh<_i13.AuthenticationDatasource>(),
             ));
-    gh.factory<_i14.LoginBloc>(() => _i14.LoginBloc(
+    gh.factory<_i15.LoginBloc>(() => _i15.LoginBloc(
           gh<_i5.FlutterSecureStorage>(),
-          gh<_i13.AuthenticationRepository>(),
+          gh<_i14.AuthenticationRepository>(),
         ));
     return this;
   }
 }
 
-class _$RegisterModule extends _i15.RegisterModule {}
+class _$RegisterModule extends _i16.RegisterModule {}

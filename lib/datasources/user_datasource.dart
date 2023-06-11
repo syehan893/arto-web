@@ -3,7 +3,6 @@ import 'package:ta_smt4/common/constants/endpoints.dart';
 import 'package:ta_smt4/common/network/api_result.dart';
 import 'package:ta_smt4/common/network/datasource_mixin.dart';
 import 'package:ta_smt4/common/network/dio_interceptors.dart';
-import 'package:ta_smt4/models/request/login_request.dart';
 
 abstract class UserDatasource {
   Future<APIResult> getUser();

@@ -9,7 +9,6 @@ import '../common/failures/common_failures.dart';
 import '../common/mixins/mixins.dart';
 import '../common/network/network_check.dart';
 import '../datasources/user_datasource.dart';
-import '../models/token.dart';
 
 abstract class UserRepository {
   Future<Either<BaseFailure, List<User>>> getUser();

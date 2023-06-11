@@ -26,18 +26,14 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository
   });
   @override
   Future<Either<BaseFailure, Token>> login(LoginRequest request) async {
-    final result = await authenticationDatasource.login(request);
-    return checkServiceResultError<Token>(
-      result: result,
-      errorPrefix: 'Login Error: ',
-      executeNext: () {
-        try {
-          return Right(Token.fromJson(
-              jsonEncode(result.internalResponse?.responseData)));
-        } catch (e) {
-          return Left(JSONParseFailure(error: e));
-        }
-      },
-    );
+    try {
+      final result = await authenticationDatasource.login(request);
+      if (result.execErrorMessage != null) {
+        return Left(JSONParseFailure(error: result.execErrorMessage));
+      }
+      return Right(Token.fromMap(result.internalResponse?.responseData ?? {}));
+    } catch (e) {
+      return Left(JSONParseFailure(error: e));
+    }
   }
 }

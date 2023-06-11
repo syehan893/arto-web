@@ -15,6 +15,6 @@ class NetworkCheckImpl implements NetworkCheck {
   Future<bool> isOnline() async {
     final connectivityResult = await connectivity.checkConnectivity();
     return connectivityResult == ConnectivityResult.mobile ||
-        connectivityResult == ConnectivityResult.wifi;
+        connectivityResult == ConnectivityResult.wifi || connectivityResult == ConnectivityResult.ethernet;
   }
 }

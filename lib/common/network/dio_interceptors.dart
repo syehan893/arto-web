@@ -23,40 +23,40 @@ class HTTPClient {
           final token = await _getToken();
 
           if (token != null) {
-            final accessTokenHasExpired =
-                JwtDecoder.isExpired(token.accessToken!);
-            final refreshTokenHasExpired =
-                JwtDecoder.isExpired(token.refreshToken!);
-            if (accessTokenHasExpired) {
-              if (refreshTokenHasExpired) {
-                return handler.reject(
-                  RefreshTokenExpiredError(
-                    requestOptions: options,
-                    error: DioErrorType.other,
-                  ),
-                  true,
-                );
-              }
-              final d = onRefreshToken(token).then((d) {
-                Token? newToken = Token.fromMap(d.data!);
-                storage.write(
-                    key: CommonStorageKeys.token, value: newToken.toJson());
-                options.headers[HttpHeaders.authorizationHeader] =
-                    newToken.accessToken;
-                logger.d('request token succeed, value: $token');
-                logger.d(
-                    'continue to perform request：path:${options.path}，baseURL:${options.path}');
-                return handler.next(options);
-              }).catchError((error, stackTrace) {
-                logger.e(error);
-                return handler.reject(error, true);
-              });
-              return d;
-            } else {
+            // final accessTokenHasExpired =
+            //     JwtDecoder.isExpired(token.accessToken!);
+            // final refreshTokenHasExpired =
+            //     JwtDecoder.isExpired(token.refreshToken!);
+            // if (accessTokenHasExpired) {
+            //   if (refreshTokenHasExpired) {
+            //     return handler.reject(
+            //       RefreshTokenExpiredError(
+            //         requestOptions: options,
+            //         error: DioErrorType.other,
+            //       ),
+            //       true,
+            //     );
+            //   }
+            //   final d = onRefreshToken(token).then((d) {
+            //     Token? newToken = Token.fromMap(d.data!);
+            //     storage.write(
+            //         key: CommonStorageKeys.token, value: newToken.toJson());
+            //     options.headers[HttpHeaders.authorizationHeader] =
+            //         newToken.accessToken;
+            //     logger.d('request token succeed, value: $token');
+            //     logger.d(
+            //         'continue to perform request：path:${options.path}，baseURL:${options.path}');
+            //     return handler.next(options);
+            //   }).catchError((error, stackTrace) {
+            //     logger.e(error);
+            //     return handler.reject(error, true);
+            //   });
+            //   return d;
+            // } else {
               options.headers[HttpHeaders.authorizationHeader] =
                   token.accessToken;
               return handler.next(options);
-            }
+            // }
           }
           return handler.next(options);
         },

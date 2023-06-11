@@ -7,6 +7,7 @@ abstract class DioOptions {
   Options tokenHeaders({required String token}) {
     return Options(headers: {
       HttpHeaders.authorizationHeader: token,
+      "Access-Control-Allow-Origin": "*",
     });
   }
 
@@ -17,7 +18,7 @@ class ArtoDioOptions extends DioOptions {
   @override
   BaseOptions get baseOptions => BaseOptions(
         baseUrl: Config.baseUrl,
-        connectTimeout: Config.connectTimeout,
-        receiveTimeout: Config.receiveTimeout,
+        // connectTimeout: Config.connectTimeout,
+        // receiveTimeout: Config.receiveTimeout,
       );
 }

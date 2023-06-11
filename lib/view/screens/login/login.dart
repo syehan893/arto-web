@@ -113,17 +113,11 @@ class LoginPage extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(10),
                                   child: TextField(
+                                    obscureText: true,
                                     onChanged: (value) {
-                                      // bloc.add(LoginUpdateRequest(
-                                      //     request: state.request!
-                                      //         .copyWith(password: value)));
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const Dashboard(),
-                                        ),
-                                      );
+                                      bloc.add(LoginUpdateRequest(
+                                          request: state.request!
+                                              .copyWith(password: value)));
                                     },
                                     decoration: const InputDecoration(
                                         border: InputBorder.none),

@@ -53,6 +53,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         (l) => emit(LoginFailedState(newState: state.copyWith(failure: l))),
         (r) async {
       _setLocalUserInfo(r);
+      return emit(LoginSuccessState(newState: state));
     });
   }
 

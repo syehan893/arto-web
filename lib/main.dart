@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ta_smt4/common/injection/injection.dart';
-import 'package:ta_smt4/view/screens/login/login.dart';
+import 'package:ta_smt4/view/screens/splash/splash_screen.dart';
 
 void main() async {
   await Future.wait([
@@ -17,10 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        "/": (context) => const LoginScreen(),
+        "/": (context) => const SplashScreen(),
       },
       initialRoute: "/",
     );
   }
 }
-// test

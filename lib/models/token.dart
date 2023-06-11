@@ -22,15 +22,15 @@ class Token extends Equatable {
 
   Map<String, dynamic> toMap() {
     return {
-      'access_token': accessToken,
+      'token': accessToken,
       'refresh_token': refreshToken,
     };
   }
 
   factory Token.fromMap(Map<String, dynamic> map) {
     return Token(
-      accessToken: map['access_token'],
-      refreshToken: map['refresh_token'],
+      accessToken: map['token'],
+      refreshToken: map['token'],
     );
   }
 
