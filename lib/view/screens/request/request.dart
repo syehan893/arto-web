@@ -89,7 +89,7 @@ class Request extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  margin: EdgeInsets.only(right: 23),
+                  margin: const EdgeInsets.only(right: 23),
                   width: 140,
                   height: 35,
                   decoration: BoxDecoration(
@@ -100,13 +100,13 @@ class Request extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.3),
                         spreadRadius: 1,
                         blurRadius: 2,
-                        offset: Offset(0, 1),
+                        offset: const Offset(0, 1),
                       ),
                     ],
                   ),
                   child: Row(
                     children: [
-                      Expanded(
+                      const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'Search...',
@@ -116,21 +116,21 @@ class Request extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
+                      SizedBox(
                         width: 35,
                         height: 35,
                         child: InkWell(
                           onTap: () {
                             // Action when search button is pressed
                           },
-                          child: Icon(Icons.search),
+                          child: const Icon(Icons.search),
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 47,
               ),
               Padding(
@@ -305,16 +305,16 @@ class transfer extends StatelessWidget {
                       height: 24,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color.fromARGB(255, 20, 16, 221),
+                        color: const Color.fromARGB(255, 20, 16, 221),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.check,
                         color: Colors.white,
                         size: 20,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   InkWell(
@@ -329,7 +329,7 @@ class transfer extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.red,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.close,
                         color: Colors.white,
                         size: 20,

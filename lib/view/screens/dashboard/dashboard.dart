@@ -227,9 +227,9 @@ class Dashboard extends StatelessWidget {
                         height: 10,
                       ),
                       Container(
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
+                          children: [
                             topUp(nama: "DANA", warna: Colors.amber),
                             topUp(nama: "OVO", warna: Colors.purple),
                             topUp(nama: "linkAja!", warna: Colors.red),
@@ -253,7 +253,7 @@ class Dashboard extends StatelessWidget {
 
 class LastestTrx extends StatelessWidget {
   const LastestTrx(
-      {required this.harga,
+      {super.key, required this.harga,
       required this.tipy,
       required this.nama,
       required this.waktu});
@@ -323,7 +323,7 @@ class LastestTrx extends StatelessWidget {
 }
 
 class topUp extends StatelessWidget {
-  const topUp({required this.nama, required this.warna});
+  const topUp({super.key, required this.nama, required this.warna});
   final String nama;
   final Color warna;
 

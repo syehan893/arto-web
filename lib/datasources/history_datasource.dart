@@ -5,21 +5,21 @@ import 'package:ta_smt4/common/network/api_result.dart';
 import 'package:ta_smt4/common/network/datasource_mixin.dart';
 import 'package:ta_smt4/common/network/dio_interceptors.dart';
 
-abstract class UserDatasource {
-  Future<APIResult> getUser(String email);
+abstract class HistoryDatasource {
+  Future<APIResult> getHistoryByEmail(String email);
 }
 
-@LazySingleton(as: UserDatasource)
-class UserDatasourceImpl extends UserDatasource with DatasourceExecutionMixin {
+@LazySingleton(as: HistoryDatasource)
+class HistoryDatasourceImpl extends HistoryDatasource with DatasourceExecutionMixin {
   final HTTPClient httpClient;
 
-  UserDatasourceImpl(this.httpClient);
+  HistoryDatasourceImpl(this.httpClient);
 
   @override
-  Future<APIResult> getUser(String email) async {
+  Future<APIResult> getHistoryByEmail(String email) async {
     return await exec(
       httpClient.dio.get(
-        sprintf(Endpoints.user.getUser, [email]),
+        sprintf(Endpoints.history.getHistoryByEmail, [email]),
       ),
     );
   }

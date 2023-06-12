@@ -2,10 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:ta_smt4/common/constants/common_storage_constant.dart';
-import 'package:ta_smt4/common/failures/dio_error.dart';
-import 'package:ta_smt4/common/helpers/logger.dart';
 import 'package:ta_smt4/common/helpers/util.dart';
 
 import '../../models/token.dart';

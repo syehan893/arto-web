@@ -69,7 +69,7 @@ class _HistoryState extends State<History> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Align(
@@ -83,13 +83,13 @@ class _HistoryState extends State<History> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 39,
                     ),
                     Align(
                       alignment: Alignment.centerRight,
                       child: Container(
-                        margin: EdgeInsets.only(right: 23),
+                        margin: const EdgeInsets.only(right: 23),
                         width: 140,
                         height: 35,
                         decoration: BoxDecoration(
@@ -100,13 +100,13 @@ class _HistoryState extends State<History> {
                               color: Colors.grey.withOpacity(0.3),
                               spreadRadius: 1,
                               blurRadius: 2,
-                              offset: Offset(0, 1),
+                              offset: const Offset(0, 1),
                             ),
                           ],
                         ),
                         child: Row(
                           children: [
-                            Expanded(
+                            const Expanded(
                               child: TextField(
                                 decoration: InputDecoration(
                                   hintText: 'Search...',
@@ -116,11 +116,11 @@ class _HistoryState extends State<History> {
                                 ),
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               width: 35,
                               height: 35,
                               child: IconButton(
-                                icon: Icon(Icons.search),
+                                icon: const Icon(Icons.search),
                                 onPressed: () {
                                   // Action when search button is pressed
                                 },
@@ -136,7 +136,7 @@ class _HistoryState extends State<History> {
                     Padding(
                       padding: const EdgeInsets.only(left: 48, right: 19),
                       child: Container(
-                        padding: EdgeInsets.only(left: 10, right: 10),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         width: lebarBody,
                         height: 29,
                         decoration: BoxDecoration(
@@ -293,5 +293,3 @@ Card builTransfer(
         )),
   );
 }
-
-//============================================================

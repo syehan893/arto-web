@@ -233,7 +233,7 @@ class _NavigasiState extends State<Navigasi> {
 }
 
 class Menu extends StatelessWidget {
-  const Menu({required this.icon, required this.title, required this.warna});
+  const Menu({super.key, required this.icon, required this.title, required this.warna});
   final IconData icon;
   final String title;
   final Color warna;

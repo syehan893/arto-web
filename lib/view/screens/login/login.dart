@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ta_smt4/common/injection/injection.dart';
-import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import 'package:ta_smt4/view/screens/login/bloc/login_bloc.dart';
 import 'package:ta_smt4/view/screens/login/widgets/login_bloc_implementor.dart';
 import 'package:ta_smt4/view/screens/login/widgets/login_listener.dart';

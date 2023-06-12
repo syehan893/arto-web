@@ -54,7 +54,7 @@ class _TransferState extends State<Transfer> {
                     color: Colors.black,
                   ), //garis
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Container(
@@ -70,7 +70,7 @@ class _TransferState extends State<Transfer> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Align(
