@@ -36,12 +36,13 @@ class Dashboard extends StatelessWidget {
                         Container(
                           child: Text("Hi, Aditya Abdi",
                               style: GoogleFonts.lato(
-                                  fontSize: 32, fontWeight: FontWeight.bold)),
+                                  fontSize: 32, fontWeight: FontWeight.w400)),
                         ),
                         Container(
                           child: Text(
                             "Welcome Back!",
-                            style: GoogleFonts.lato(fontSize: 20),
+                            style: GoogleFonts.lato(
+                                fontSize: 20, fontWeight: FontWeight.w300),
                           ),
                         ),
                       ],

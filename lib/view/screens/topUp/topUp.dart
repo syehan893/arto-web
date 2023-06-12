@@ -33,18 +33,17 @@ class _TopUpState extends State<TopUp> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 48, top: 32),
+                    padding: const EdgeInsets.only(left: 48, top: 31),
                     child: Container(
                       child: Text(
                         "Top Up",
-                        style: GoogleFonts.lato(
-                            fontSize: 32, fontWeight: FontWeight.bold),
+                        style: GoogleFonts.lato(fontSize: 32),
                       ),
                     ), //judul
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 52,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 48, right: 19),
@@ -54,7 +53,9 @@ class _TopUpState extends State<TopUp> {
                     color: Colors.black,
                   ), //garis
                 ),
-
+                const SizedBox(
+                  height: 35,
+                ),
                 Container(
                   child: Column(
                     children: [
@@ -67,6 +68,9 @@ class _TopUpState extends State<TopUp> {
                             style: GoogleFonts.lato(fontSize: 13),
                           ),
                         ),
+                      ),
+                      const SizedBox(
+                        height: 10,
                       ),
                       Align(
                         alignment: Alignment.topLeft,
@@ -103,32 +107,40 @@ class _TopUpState extends State<TopUp> {
                       children: [
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          icon:
+                              const Icon(Icons.account_balance_wallet_outlined),
                           label: const Text("dana"),
                           style: ElevatedButton.styleFrom(
-                            minimumSize: const Size(150, 45), backgroundColor: Colors.blue.shade300,
+                            minimumSize: const Size(150, 45),
+                            backgroundColor: Colors.blue.shade300,
                           ),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          icon:
+                              const Icon(Icons.account_balance_wallet_outlined),
                           label: const Text("ovo"),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: const Size(150, 45), backgroundColor: Colors.purple.shade300),
+                              minimumSize: const Size(150, 45),
+                              backgroundColor: Colors.purple.shade300),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          icon:
+                              const Icon(Icons.account_balance_wallet_outlined),
                           label: const Text("link aja"),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: const Size(150, 45), backgroundColor: Colors.red),
+                              minimumSize: const Size(150, 45),
+                              backgroundColor: Colors.red),
                         ),
                         ElevatedButton.icon(
                           onPressed: () {},
-                          icon: const Icon(Icons.account_balance_wallet_outlined),
+                          icon:
+                              const Icon(Icons.account_balance_wallet_outlined),
                           label: const Text("gopay"),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: const Size(150, 45), backgroundColor: Colors.green),
+                              minimumSize: const Size(150, 45),
+                              backgroundColor: Colors.green),
                         )
                       ],
                     ),

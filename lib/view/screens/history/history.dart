@@ -48,7 +48,7 @@ class _HistoryState extends State<History> {
               Padding(
                 padding: const EdgeInsets.only(left: 48, right: 19),
                 child: Container(
-                  height: 1,
+                  height: 2,
                   width: lebarBody,
                   color: Colors.black,
                 ), //garis
@@ -64,10 +64,13 @@ class _HistoryState extends State<History> {
                       child: Container(
                         padding: const EdgeInsets.only(left: 48),
                         child: Text(
-                          "your balance",
+                          "Your Balance",
                           style: GoogleFonts.lato(fontSize: 13),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: 10,
                     ),
                     Align(
                       alignment: Alignment.topLeft,
@@ -75,67 +78,53 @@ class _HistoryState extends State<History> {
                         padding: const EdgeInsets.only(left: 48),
                         child: Text(
                           "Rp.1.000.000,-",
-                          style: GoogleFonts.lato(fontSize: 32),
+                          style: GoogleFonts.lato(
+                              fontSize: 32, fontWeight: FontWeight.w700),
                         ),
                       ),
                     ),
                     SizedBox(
-                      height: lebarBody * 0.01,
+                      height: 39,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 48),
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 19),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        margin: EdgeInsets.only(right: 23),
+                        width: 140,
+                        height: 35,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(7),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.3),
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 1),
+                            ),
+                          ],
+                        ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              height: 30,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(7),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: const Offset(0, 3),
-                                    )
-                                  ]),
-                              child: const Center(child: Text("filter")),
+                            Expanded(
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Search...',
+                                  border: InputBorder.none,
+                                  contentPadding:
+                                      EdgeInsets.only(bottom: 10, left: 5),
+                                ),
+                              ),
                             ),
                             Container(
-                              height: 30,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(7),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: const Offset(0, 3),
-                                    )
-                                  ]),
-                              child: const Center(child: Text("tanggal")),
-                            ),
-                            Container(
-                              height: 30,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(7),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: const Offset(0, 3),
-                                    )
-                                  ]),
-                              child: const Center(child: Text("cari")),
+                              width: 35,
+                              height: 35,
+                              child: IconButton(
+                                icon: Icon(Icons.search),
+                                onPressed: () {
+                                  // Action when search button is pressed
+                                },
+                              ),
                             ),
                           ],
                         ),
@@ -147,13 +136,14 @@ class _HistoryState extends State<History> {
                     Padding(
                       padding: const EdgeInsets.only(left: 48, right: 19),
                       child: Container(
+                        padding: EdgeInsets.only(left: 10, right: 10),
                         width: lebarBody,
                         height: 29,
                         decoration: BoxDecoration(
                             color: loginButtonColor,
                             borderRadius: BorderRadius.circular(7)),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               "nama/jenis transaksi",

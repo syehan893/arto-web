@@ -56,7 +56,7 @@ class Help extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(left: 48),
                         child: Text(
-                          "Hi, Randy",
+                          "Hi, Aditya Abdi",
                           style: GoogleFonts.lato(
                               fontSize: 32, fontWeight: FontWeight.w400),
                         ),

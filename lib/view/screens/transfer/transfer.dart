@@ -34,18 +34,17 @@ class _TransferState extends State<Transfer> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 48, top: 32),
+                    padding: const EdgeInsets.only(left: 48, top: 31),
                     child: Container(
                       child: Text(
                         "Transfer",
-                        style: GoogleFonts.lato(
-                            fontSize: 32, fontWeight: FontWeight.bold),
+                        style: GoogleFonts.lato(fontSize: 32),
                       ),
                     ), //judul
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 52,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 48, right: 19),
@@ -55,7 +54,9 @@ class _TransferState extends State<Transfer> {
                     color: Colors.black,
                   ), //garis
                 ),
-
+                SizedBox(
+                  height: 35,
+                ),
                 Container(
                   child: Column(
                     children: [
@@ -64,10 +65,13 @@ class _TransferState extends State<Transfer> {
                         child: Container(
                           padding: const EdgeInsets.only(left: 48),
                           child: Text(
-                            "yout balance",
+                            "Your Balance",
                             style: GoogleFonts.lato(fontSize: 13),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       Align(
                         alignment: Alignment.topLeft,
@@ -76,7 +80,7 @@ class _TransferState extends State<Transfer> {
                           child: Text(
                             "Rp.1.000.000,-",
                             style: GoogleFonts.lato(
-                                fontSize: 32, fontWeight: FontWeight.bold),
+                                fontSize: 32, fontWeight: FontWeight.w700),
                           ),
                         ),
                       )

@@ -74,8 +74,9 @@ class Request extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(left: 48),
                         child: Text(
-                          "Rp 1.998.000.000,-",
-                          style: GoogleFonts.lato(fontSize: 32),
+                          "Rp 1.000.000,-",
+                          style: GoogleFonts.lato(
+                              fontSize: 32, fontWeight: FontWeight.w700),
                         ),
                       ),
                     )
@@ -85,76 +86,51 @@ class Request extends StatelessWidget {
               const SizedBox(
                 height: 39,
               ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const SizedBox(
-                      width: 52,
-                    ),
-                    Expanded(
-                      child: Container(
-                        width: double.infinity,
-                        height: 35,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(7),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 5,
-                              offset: const Offset(0, 3),
-                            )
-                          ],
-                        ),
-                        child: Center(
-                          child: Text(
-                            "23 Januari",
-                            style: GoogleFonts.lato(
-                              fontSize: 13,
-                              color: Colors.black,
-                            ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Container(
+                  margin: EdgeInsets.only(right: 23),
+                  width: 140,
+                  height: 35,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(7),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: Offset(0, 1),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Search...',
+                            border: InputBorder.none,
+                            contentPadding:
+                                EdgeInsets.only(bottom: 10, left: 5),
                           ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 365,
-                    ),
-                    Expanded(
-                      child: Container(
+                      Container(
+                        width: 35,
                         height: 35,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(7),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 5,
-                              offset: const Offset(0, 3),
-                            )
-                          ],
-                        ),
-                        child: Center(
-                          child: Text(
-                            "search",
-                            style: GoogleFonts.lato(
-                              fontSize: 13,
-                              color: Colors.black,
-                            ),
-                          ),
+                        child: InkWell(
+                          onTap: () {
+                            // Action when search button is pressed
+                          },
+                          child: Icon(Icons.search),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 19,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 47,
               ),
               Padding(
