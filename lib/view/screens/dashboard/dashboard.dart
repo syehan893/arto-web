@@ -17,7 +17,6 @@ class Dashboard extends StatelessWidget {
       body: Row(
         children: [
           const Navigasi(),
-          //kiri
 
           Container(
             width: lebarBody * 0.60,
