@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:meta_seo/meta_seo.dart';
 import 'package:ta_smt4/common/injection/injection.dart';
 import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import 'package:ta_smt4/view/screens/login/login.dart';
@@ -10,6 +12,16 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+if(kIsWeb) {
+    // Define MetaSEO object
+    MetaSEO meta = MetaSEO();
+    // add meta seo data for web app as you want
+    meta.author(author: 'alex');
+    meta.description(description: 'Meta SEO Web Example');
+    meta.keywords(keywords: 'Flutter, Dart, SEO, Meta, Web,arto,tekweb,dompet digital,dompet electronik,utp tekweb');
+  }
+
     return BlocProvider(
       create: (context) => getIt<SplashCubit>(),
       child: const _SplashScreen(),
