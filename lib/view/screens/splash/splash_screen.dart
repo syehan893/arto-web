@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta_seo/meta_seo.dart';
 import 'package:ta_smt4/common/injection/injection.dart';
+import 'package:ta_smt4/view/screens/dashboard/cubit/dashboard_cubit.dart';
 import 'package:ta_smt4/view/screens/dashboard/dashboard.dart';
 import 'package:ta_smt4/view/screens/login/login.dart';
 import 'package:ta_smt4/view/screens/splash/cubit/splash_cubit.dart';
@@ -52,7 +53,10 @@ class _SplashScreenState extends State<_SplashScreen> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Dashboard(),
+                builder: (context) => BlocProvider(
+                  create: (context) => getIt<DashboardCubit>()..getUser(),
+                  child: Dashboard(),
+                ),
               ),
             );
           });

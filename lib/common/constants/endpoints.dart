@@ -22,12 +22,12 @@ class _User {
 
 class _Transaction {
   const _Transaction();
-  String get getTransactionByEmail => '$_baseUrl/transaction/%s';
-  String get getRequestpayment => '$_baseUrl/transaction/getRequestPayment/%s';
-  String get transfer => '$_baseUrl/transaction/transfer';
-  String get topup => '$_baseUrl/transaction/topUp';
-  String get requestPayment => '$_baseUrl/transaction/requestPayment';
-  String get requestPaymentApproval => '$_baseUrl/transaction/requestPaymentApproval';
+  String get getTransactionByEmail => '$_baseUrl/transactions/%s';
+  String get getRequestpayment => '$_baseUrl/transactions/getRequestPayment/%s';
+  String get transfer => '$_baseUrl/transactions/transfer';
+  String get topup => '$_baseUrl/transactions/topUp';
+  String get requestPayment => '$_baseUrl/transactions/requestPayment';
+  String get requestPaymentApproval => '$_baseUrl/transactions/requestPaymentApproval';
 }
 
 class _History {

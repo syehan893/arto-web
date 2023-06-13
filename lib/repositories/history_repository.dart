@@ -29,7 +29,7 @@ class HistoryRepositoryImpl extends HistoryRepository
       if (result.execErrorMessage != null) {
         return Left(JSONParseFailure(error: result.execErrorMessage));
       }
-      List histories = result as List;
+      List histories = result.internalResponse?.responseData?['response'] as List;
       return Right(histories.map((e) => History.fromJson(e)).toList());
     } catch (e) {
       return Left(JSONParseFailure(error: e));

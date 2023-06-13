@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ta_smt4/common/injection/injection.dart';
+import 'package:ta_smt4/models/transaction.dart';
+import 'package:ta_smt4/view/screens/dashboard/cubit/dashboard_cubit.dart';
 import 'package:ta_smt4/view/screens/user/user.dart';
 import '../../utils/warna.dart';
 import '../navigasi/navigasi.dart';
@@ -18,228 +22,280 @@ class Dashboard extends StatelessWidget {
         children: [
           const Navigasi(),
 
-          Container(
-            width: lebarBody * 0.60,
-            height: tinggiBody,
-            color: centerPageColor,
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 35, right: 32, top: 32),
+          BlocProvider(
+            create: (context) => getIt<DashboardCubit>()..getUser(),
+            child: BlocBuilder<DashboardCubit, DashboardState>(
+              builder: (context, state) {
+                if (state is DashboardLoaded) {
+                  List<Transaction> subcribtion = state.transaction
+                      .where((element) => element.type == 'REQUEST_PAYMENT')
+                      .toList();
+                  return Container(
+                    width: lebarBody * 0.60,
+                    height: tinggiBody,
+                    color: centerPageColor,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          child: Text("Hi, Aditya Abdi",
-                              style: GoogleFonts.lato(
-                                  fontSize: 32, fontWeight: FontWeight.w400)),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 35, right: 32, top: 32),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  child: Text("Hi, ${state.user?.name}",
+                                      style: GoogleFonts.lato(
+                                          fontSize: 32,
+                                          fontWeight: FontWeight.w400)),
+                                ),
+                                Container(
+                                  child: Text(
+                                    "Welcome Back!",
+                                    style: GoogleFonts.lato(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w300),
+                                  ),
+                                ),
+                              ],
+                            ), //judul
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 28,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 35, right: 32),
+                          child: Container(
+                            height: 2,
+                            width: lebarBody,
+                            color: Colors.black,
+                          ), //garis
+                        ),
+                        const SizedBox(
+                          height: 35,
                         ),
                         Container(
-                          child: Text(
-                            "Welcome Back!",
-                            style: GoogleFonts.lato(
-                                fontSize: 20, fontWeight: FontWeight.w300),
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: Container(
+                                  padding: const EdgeInsets.only(
+                                      left: 35, right: 32),
+                                  child: Text(
+                                    "Your Balance",
+                                    style: GoogleFonts.lato(fontSize: 13),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: Container(
+                                  padding: const EdgeInsets.only(
+                                      left: 35, right: 32),
+                                  child: Text(
+                                    "Rp.${state.user?.balance},-",
+                                    style: GoogleFonts.lato(
+                                        fontSize: 32,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 35, right: 32),
+                                child: Container(
+                                  height: 288,
+                                  width: lebarBody,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(22),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 2,
+                                          blurRadius: 5,
+                                          offset: const Offset(0, 3),
+                                        )
+                                      ]),
+                                  child: Container(
+                                    padding: const EdgeInsets.only(
+                                        left: 20, top: 14),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                            style: GoogleFonts.lato(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w700),
+                                            "Spending Activity"),
+                                        Text(
+                                            style: GoogleFonts.lato(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w700),
+                                            "Comming Soon"),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              Container(
+                                  child: Container(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "Lastest transaction",
+                                          style: GoogleFonts.lato(
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.w700),
+                                        ),
+                                        Row(
+                                          children: [
+                                            ...List.generate(3, (index) {
+                                              RegExp regex =
+                                                  RegExp(r'([.]*0)(?!.*\d)');
+                                              return LastestTrx(
+                                                  harga: double.parse(state
+                                                          .transaction[index]
+                                                          .nominal
+                                                          .toString()
+                                                        ..replaceAll(regex, ''))
+                                                      .toInt(),
+                                                  tipy: state.transaction[index]
+                                                          .type ??
+                                                      '',
+                                                  nama: state.transaction[index]
+                                                          .detail ??
+                                                      '',
+                                                  waktu: DateTime.now());
+                                            }),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                    Container(
+                                      height: 130,
+                                      width: 1,
+                                      color: Colors.black,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text(
+                                          "Subsrciptions",
+                                          style: GoogleFonts.lato(
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.w700),
+                                        ),
+                                        Row(
+                                          children: [
+                                            ...List.generate(
+                                                subcribtion.length > 2
+                                                    ? 2
+                                                    : subcribtion.length,
+                                                (index) {
+                                              RegExp regex =
+                                                  RegExp(r'([.]*0)(?!.*\d)');
+                                              return LastestTrx(
+                                                  harga: double.parse(
+                                                          subcribtion[index]
+                                                              .nominal
+                                                              .toString()
+                                                            ..replaceAll(
+                                                                regex, ''))
+                                                      .toInt(),
+                                                  tipy:
+                                                      subcribtion[index].type ??
+                                                          '',
+                                                  nama: subcribtion[index]
+                                                          .detail ??
+                                                      '',
+                                                  waktu: DateTime.now());
+                                            }),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                  child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text(
+                                    "Lihat transaksi lainnya >>",
+                                    style: GoogleFonts.lato(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  const SizedBox(
+                                    width: 208,
+                                  ),
+                                  Text(
+                                    "Lihat transaksi lainnya >>",
+                                    style: GoogleFonts.lato(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
+                              )),
+                              const SizedBox(
+                                height: 45,
+                              ),
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: Container(
+                                    padding: const EdgeInsets.only(left: 105),
+                                    child: Text(
+                                      "Top Up",
+                                      style: GoogleFonts.lato(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w700),
+                                    )),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                child: const Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    topUp(nama: "DANA", warna: Colors.amber),
+                                    topUp(nama: "OVO", warna: Colors.purple),
+                                    topUp(nama: "linkAja!", warna: Colors.red),
+                                    topUp(nama: "Gopay", warna: Colors.green)
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
-                    ), //judul
-                  ),
-                ),
-                const SizedBox(
-                  height: 28,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 35, right: 32),
-                  child: Container(
-                    height: 2,
-                    width: lebarBody,
-                    color: Colors.black,
-                  ), //garis
-                ),
-                const SizedBox(
-                  height: 35,
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Container(
-                          padding: const EdgeInsets.only(left: 35, right: 32),
-                          child: Text(
-                            "Your Balance",
-                            style: GoogleFonts.lato(fontSize: 13),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Container(
-                          padding: const EdgeInsets.only(left: 35, right: 32),
-                          child: Text(
-                            "Rp.2.000.000.000,-",
-                            style: GoogleFonts.lato(
-                                fontSize: 32, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 35, right: 32),
-                        child: Container(
-                          height: 288,
-                          width: lebarBody,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(22),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: const Offset(0, 3),
-                                )
-                              ]),
-                          child: Container(
-                            padding: const EdgeInsets.only(left: 20, top: 14),
-                            child: Text(
-                                style: GoogleFonts.lato(
-                                    fontSize: 24, fontWeight: FontWeight.w700),
-                                "Spending Activity"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                          child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Column(
-                              children: [
-                                Text(
-                                  "Lastest transaction",
-                                  style: GoogleFonts.lato(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                Row(
-                                  children: [
-                                    LastestTrx(
-                                        harga: 8989,
-                                        tipy: "makanan",
-                                        nama: "ichiban",
-                                        waktu: DateTime.now()),
-                                    const SizedBox(
-                                      width: 28,
-                                    ),
-                                    LastestTrx(
-                                        harga: 8989,
-                                        tipy: "makanan",
-                                        nama: "ichiban",
-                                        waktu: DateTime.now())
-                                  ],
-                                )
-                              ],
-                            ),
-                            Container(
-                              height: 130,
-                              width: 1,
-                              color: Colors.black,
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  "Subsrciptions",
-                                  style: GoogleFonts.lato(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                Row(
-                                  children: [
-                                    LastestTrx(
-                                        harga: 8989,
-                                        tipy: "makanan",
-                                        nama: "ichiban",
-                                        waktu: DateTime.now()),
-                                    const SizedBox(
-                                      width: 28,
-                                    ),
-                                    LastestTrx(
-                                        harga: 8989,
-                                        tipy: "makanan",
-                                        nama: "ichiban",
-                                        waktu: DateTime.now())
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      )),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                          child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            "Lihat transaksi lainnya >>",
-                            style: GoogleFonts.lato(
-                                fontSize: 13, fontWeight: FontWeight.w400),
-                          ),
-                          const SizedBox(
-                            width: 208,
-                          ),
-                          Text(
-                            "Lihat transaksi lainnya >>",
-                            style: GoogleFonts.lato(
-                                fontSize: 13, fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      )),
-                      const SizedBox(
-                        height: 45,
-                      ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Container(
-                            padding: const EdgeInsets.only(left: 105),
-                            child: Text(
-                              "Top Up",
-                              style: GoogleFonts.lato(
-                                  fontSize: 24, fontWeight: FontWeight.w700),
-                            )),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            topUp(nama: "DANA", warna: Colors.amber),
-                            topUp(nama: "OVO", warna: Colors.purple),
-                            topUp(nama: "linkAja!", warna: Colors.red),
-                            topUp(nama: "Gopay", warna: Colors.green)
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                    ),
+                  );
+                }
+                return SizedBox.shrink();
+              },
             ),
           ),
           //tengah
@@ -252,7 +308,8 @@ class Dashboard extends StatelessWidget {
 
 class LastestTrx extends StatelessWidget {
   const LastestTrx(
-      {super.key, required this.harga,
+      {super.key,
+      required this.harga,
       required this.tipy,
       required this.nama,
       required this.waktu});
@@ -267,7 +324,7 @@ class LastestTrx extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Container(
         width: 161,
-        height: 85,
+        height: 95,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7),
             color: Colors.white,

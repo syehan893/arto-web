@@ -21,15 +21,20 @@ import '../../datasources/history_datasource.dart' as _i7;
 import '../../datasources/transaction_datasource.dart' as _i11;
 import '../../datasources/user_datasource.dart' as _i13;
 import '../../repositories/auth_repository.dart' as _i16;
-import '../../repositories/history_repository.dart' as _i17;
+import '../../repositories/history_repository.dart' as _i18;
 import '../../repositories/transaction_repository.dart' as _i12;
 import '../../repositories/user_repository.dart' as _i14;
-import '../../view/screens/login/bloc/login_bloc.dart' as _i18;
+import '../../view/screens/dashboard/cubit/dashboard_cubit.dart' as _i17;
+import '../../view/screens/history/cubit/history_cubit.dart' as _i24;
+import '../../view/screens/login/bloc/login_bloc.dart' as _i19;
+import '../../view/screens/request/cubit/request_payment_cubit.dart' as _i20;
 import '../../view/screens/splash/cubit/splash_cubit.dart' as _i10;
-import '../../view/screens/user/cubit/user_cubit.dart' as _i19;
+import '../../view/screens/topUp/cubit/topup_cubit.dart' as _i22;
+import '../../view/screens/transfer/cubit/transfer_cubit.dart' as _i21;
+import '../../view/screens/user/cubit/user_cubit.dart' as _i23;
 import '../network/dio_interceptors.dart' as _i6;
 import '../network/network_check.dart' as _i8;
-import 'register_module.dart' as _i20;
+import 'register_module.dart' as _i25;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -79,20 +84,45 @@ extension GetItInjectableX on _i1.GetIt {
               networkCheck: gh<_i8.NetworkCheck>(),
               authenticationDatasource: gh<_i15.AuthenticationDatasource>(),
             ));
-    gh.lazySingleton<_i17.HistoryRepository>(() => _i17.HistoryRepositoryImpl(
+    gh.factory<_i17.DashboardCubit>(() => _i17.DashboardCubit(
+          gh<_i14.UserRepository>(),
+          gh<_i5.FlutterSecureStorage>(),
+          gh<_i12.TransactionRepository>(),
+        ));
+    gh.lazySingleton<_i18.HistoryRepository>(() => _i18.HistoryRepositoryImpl(
           networkCheck: gh<_i8.NetworkCheck>(),
           historyDatasource: gh<_i7.HistoryDatasource>(),
         ));
-    gh.factory<_i18.LoginBloc>(() => _i18.LoginBloc(
+    gh.factory<_i19.LoginBloc>(() => _i19.LoginBloc(
           gh<_i5.FlutterSecureStorage>(),
           gh<_i16.AuthenticationRepository>(),
         ));
-    gh.factory<_i19.UserCubit>(() => _i19.UserCubit(
+    gh.factory<_i20.RequestpaymentCubit>(() => _i20.RequestpaymentCubit(
           gh<_i14.UserRepository>(),
           gh<_i5.FlutterSecureStorage>(),
+          gh<_i12.TransactionRepository>(),
+        ));
+    gh.factory<_i21.TransferRequestCubit>(() => _i21.TransferRequestCubit(
+          gh<_i14.UserRepository>(),
+          gh<_i5.FlutterSecureStorage>(),
+          gh<_i12.TransactionRepository>(),
+        ));
+    gh.factory<_i22.TransferRequestCubit>(() => _i22.TransferRequestCubit(
+          gh<_i14.UserRepository>(),
+          gh<_i5.FlutterSecureStorage>(),
+          gh<_i12.TransactionRepository>(),
+        ));
+    gh.factory<_i23.UserCubit>(() => _i23.UserCubit(
+          gh<_i14.UserRepository>(),
+          gh<_i5.FlutterSecureStorage>(),
+        ));
+    gh.factory<_i24.HistoryCubit>(() => _i24.HistoryCubit(
+          gh<_i14.UserRepository>(),
+          gh<_i5.FlutterSecureStorage>(),
+          gh<_i18.HistoryRepository>(),
         ));
     return this;
   }
 }
 
-class _$RegisterModule extends _i20.RegisterModule {}
+class _$RegisterModule extends _i25.RegisterModule {}

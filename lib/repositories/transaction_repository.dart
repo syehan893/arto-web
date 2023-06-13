@@ -45,7 +45,7 @@ class TransactionRepositoryImpl extends TransactionRepository
       if (result.execErrorMessage != null) {
         return Left(JSONParseFailure(error: result.execErrorMessage));
       }
-      List requestPayment = result as List;
+      List requestPayment = result.internalResponse?.responseData?['response'] as List;
       return Right(
           requestPayment.map((e) => RequestPayment.fromJson(e)).toList());
     } catch (e) {
@@ -61,8 +61,8 @@ class TransactionRepositoryImpl extends TransactionRepository
       if (result.execErrorMessage != null) {
         return Left(JSONParseFailure(error: result.execErrorMessage));
       }
-      List requestPayment = result as List;
-      return Right(requestPayment.map((e) => Transaction.fromJson(e)).toList());
+      List trx = result.internalResponse?.responseData?['response'] as List;
+      return Right(trx.map((e) => Transaction.fromJson(e)).toList());
     } catch (e) {
       return Left(JSONParseFailure(error: e));
     }
