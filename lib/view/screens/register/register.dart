@@ -1,38 +1,22 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ta_smt4/common/injection/injection.dart';
-import 'package:ta_smt4/view/screens/login/bloc/login_bloc.dart';
-import 'package:ta_smt4/view/screens/login/widgets/login_bloc_implementor.dart';
-import 'package:ta_smt4/view/screens/login/widgets/login_listener.dart';
-import 'package:ta_smt4/view/screens/register/register.dart';
-import '../../utils/warna.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+import '../../utils/warna.dart';
+import '../login/bloc/login_bloc.dart';
+
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<LoginBloc>(),
-      child: const LoginPage(),
-    );
-  }
+  State<Register> createState() => _RegisterState();
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  get columnLoginColor => null;
-
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
-    return LoginListener(
-      child: LoginBlocBuilder(
-        builder: (context, bloc, state) {
-          return MaterialApp(
-              debugShowCheckedModeBanner: false,
-              home: Scaffold(
+    return Scaffold(
+      
                 backgroundColor: primaryColor,
                 body: Center(
                   child: Container(
@@ -79,9 +63,9 @@ class LoginPage extends StatelessWidget {
                                     padding: const EdgeInsets.all(10),
                                     child: TextField(
                                       onChanged: (value) {
-                                        bloc.add(LoginUpdateRequest(
-                                            request: state.request!
-                                                .copyWith(email: value)));
+                                        // bloc.add(LoginUpdateRequest(
+                                        //     request: state.request!
+                                        //         .copyWith(email: value)));
                                       },
                                       decoration: const InputDecoration(
                                         border: InputBorder.none,
@@ -115,29 +99,18 @@ class LoginPage extends StatelessWidget {
                                   child: TextField(
                                     obscureText: true,
                                     onChanged: (value) {
-                                      bloc.add(LoginUpdateRequest(
-                                          request: state.request!
-                                              .copyWith(password: value)));
+                                      // bloc.add(LoginUpdateRequest(
+                                      //     request: state.request!
+                                      //         .copyWith(password: value)));
                                     },
                                     decoration: const InputDecoration(
                                         border: InputBorder.none),
                                   ),
                                 ),
                               ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Text("Don't have an account?"),
-                              TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => Register(),
-                                      ),
-                                    );
-                                  },
-                                  child: Text("register now!")),
+                             
+                             
+                            
                               const SizedBox(
                                 height: 20,
                               ),
@@ -146,7 +119,7 @@ class LoginPage extends StatelessWidget {
                                 height: 46,
                                 child: ElevatedButton(
                                     onPressed: () {
-                                      bloc.add(LoginSubmit());
+                                     // bloc.add(LoginSubmit());
                                     },
                                     style: ButtonStyle(
                                         shape: MaterialStateProperty.all<
@@ -163,7 +136,7 @@ class LoginPage extends StatelessWidget {
                                             MaterialStateProperty.all<Color>(
                                                 secunderColor)),
                                     child: Text(
-                                      "LOGIN",
+                                      "REGISTER",
                                       style: GoogleFonts.lato(fontSize: 20),
                                     )),
                               )
@@ -174,9 +147,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),);
-        },
-      ),
+              
     );
   }
 }
